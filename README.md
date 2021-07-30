@@ -22,7 +22,7 @@ https://60f6d124546a890007bfb2be--eacrave.netlify.app/
 ## API and Data Sample
 
 
-Airtable is returning the data for this base as follows:
+backend is returning the data for this base as follows:
 
 ```
 
