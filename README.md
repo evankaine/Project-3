@@ -17,7 +17,7 @@
 
 ## Component Hierarchy
 
-![imageAlt]()
+![imageAlt](https://imgur.com/Abe8dk5.png)
 
 ## Data Sample
 
