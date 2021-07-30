@@ -1,7 +1,7 @@
-# Project-3
+# imgNation
 
 
-# Project-3
+# imgNation
 
 
 ## Project Description
