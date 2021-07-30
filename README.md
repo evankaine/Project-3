@@ -11,8 +11,8 @@
 ## Wireframes
 
 
-![imageAlt]()
-![imageAlt]()
+![imageAlt](https://imgur.com/MmJToW7)
+![imageAlt](https://imgur.com/ZnQ0ZNC)
 ![imageAlt]()
 
 ## Component Hierarchy
