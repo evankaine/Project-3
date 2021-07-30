@@ -33,11 +33,17 @@ backend is returning the data for this base as follows:
 
 #### MVP
 
-
+- Create Account
+- Make posts
+- Sign out
+- Profile Page
 
 #### PostMVP
 
-
+- Like Button 
+- Messaging 
+- Add Friend
+- Interest Lists
 
 ## Project Schedule
 
@@ -91,7 +97,8 @@ Henry - Authentication / DB / Backend
 
 ### Opportunities:
 
-
+Growth on our backend skills
 
 ### Threats:
 
+not letting the backend eat up to much of our time
