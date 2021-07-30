@@ -19,7 +19,7 @@
 
 ![imageAlt]()
 
-## API and Data Sample
+## Data Sample
 
 
 backend is returning the data for this base as follows:
