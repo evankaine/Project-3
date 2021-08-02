@@ -9,6 +9,10 @@ imgNation is an MongoDB and React build social media platform where the user is 
 
 https://docs.google.com/document/d/12Fyt2f0gGayo98UrFe_HYiu-wy9dhZ9IIOL-pEve3-U/edit
 
+## Project Board
+
+https://github.com/users/evankaine/projects/1
+
 ## Wireframes
 
 
