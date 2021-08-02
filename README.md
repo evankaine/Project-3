@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # imgNation
 
 
@@ -141,3 +142,6 @@ not letting the backend eat up to much of our time
 =======
 
 >>>>>>> development
+=======
+
+>>>>>>> origin/Chris
