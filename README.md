@@ -22,7 +22,7 @@ https://github.com/users/evankaine/projects/1
 
 ## Component Hierarchy
 
-![imageAlt](https://imgur.com/Abe8dk5.png)
+![imageAlt](https://imgur.com/6z1F3q1.png)
 
 ## Schemas
 
