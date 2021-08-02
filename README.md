@@ -3,7 +3,7 @@
 
 ## Project Description
 
-
+imgNation is an MongoDB and React build social media platform where the user is able to make an account, sign in and start posting photos to share on the site. From the homepage, the user is able to view all posts on the platform and have the ability to like others photos. Clicking on or searching a users name will bring you to their profile page and you will be able to view all posts by that user.
 
 ## Wireframes
 
@@ -16,14 +16,33 @@
 
 ![imageAlt](https://imgur.com/Abe8dk5.png)
 
-## Data Sample
-
-
-backend is returning the data for this base as follows:
+## Schemas
 
 ```
+const postSchema = new Schema ({
+    username: { type: String, required: true },
+    imgURL: { type: String, required: true },
+    caption: { type: String, required: true },
+    user_id: { type: Schema.Types.ObjectId, ref: 'User' }
+    },
+    { timestamps: true }
+)
 
+module.exports = mongoose.model("Post", postSchema) 
 
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
+
+const userSchema = new Schema ({
+    username: {type: String, required: true},
+    email: {type: String, required: true},
+    password: {type: String, required: true},
+    posts: [{type: Schema.Types.ObjectId, ref: "Post"}]
+    },
+    {timestamps: true}
+)
+
+module.exports = mongoose.model("User", userSchema) 
 ```
 
 ### MVP/PostMVP
