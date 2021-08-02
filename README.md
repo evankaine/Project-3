@@ -84,24 +84,24 @@ module.exports = mongoose.model("User", userSchema)
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      ----      |     -----     |    -----    |
-| Backend setup             |    H     |      ----      |     -----     |    -----    |
-| Authentication            |    H     |      ----      |     -----     |    -----    |
-| React Logic               |    H     |      ----      |     -----     |    -----    |
-| Landing Screen            |    H     |      ----      |     -----     |    -----    |
-| Lisitng Screen            |    H     |      ----      |     -----     |    -----    | 
-| Detail Screen             |    H     |      ----      |     -----     |    -----    |
-| Form/post creation        |    H     |      ----      |     -----     |    -----    |
-| Data/update(edit post)    |    H     |      ----      |     -----     |    -----    |
-| Componenet Home Page      |    H     |      ----      |     -----     |    -----    |
-| Componenet Profile Page   |    H     |      ----      |     -----     |    -----    |
-| Component CSS Home        |    H     |      ----      |     -----     |    -----    |
-| Component CSS Profile     |    H     |      ----      |     -----     |    -----    |
-| Like Button Function      |    H     |      ----      |     -----     |    -----    |
-| Friends Page              |    H     |      ----      |     -----     |    -----    |
-| Messages                  |    H     |      ----      |     -----     |    -----    |
-| UI / UX                   |    H     |      ----      |     -----     |    -----    |
-| Total                     |    H     |      ----      |     -----     |    -----    |
+| Proposal                  |    H     |      2hrs      |     -----     |    -----    |
+| Backend setup             |    H     |      3hrs      |     -----     |    -----    |
+| Authentication            |    H     |      2hrs      |     -----     |    -----    |
+| React Logic               |    H     |      3hrs      |     -----     |    -----    |
+| Landing Screen            |    H     |      2hrs      |     -----     |    -----    |
+| Lisitng Screen            |    H     |      2hrs      |     -----     |    -----    | 
+| Detail Screen             |    H     |      2hrs      |     -----     |    -----    |
+| Form/post creation        |    H     |      2hrs      |     -----     |    -----    |
+| Data/update(edit post)    |    H     |      2hrs      |     -----     |    -----    |
+| Componenet Home Page      |    H     |      2hrs      |     -----     |    -----    |
+| Componenet Profile Page   |    H     |      3hrs      |     -----     |    -----    |
+| Component CSS Home        |    H     |      3hrs      |     -----     |    -----    |
+| Component CSS Profile     |    H     |      3hrs      |     -----     |    -----    |
+| Like Button Function      |    H     |      2hrs      |     -----     |    -----    |
+| Friends Page              |    H     |      3hrs      |     -----     |    -----    |
+| Messages                  |    H     |      3hrs      |     -----     |    -----    |
+| UI / UX                   |    H     |      3hrs      |     -----     |    -----    |
+| Total                     |    H     |      42hrs     |     -----     |    -----    |
 
 ## SWOT Analysis
 
