@@ -1,9 +1,6 @@
 # imgNation
 
 
-# imgNation
-
-
 ## Project Description
 
 
