@@ -15,11 +15,11 @@ https://github.com/users/evankaine/projects/1
 
 ## Wireframes
 
-Home Page
+#Home Page
 ![imageAlt](https://imgur.com/MmJToW7.png)
-Profile Page
+#Profile Page
 ![imageAlt](https://imgur.com/ZnQ0ZNC.png)
-Mobile Home Page
+#Mobile Home Page
 ![imageAlt](https://imgur.com/5TAjfjc.png)
 
 ## Component Hierarchy
