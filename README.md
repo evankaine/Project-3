@@ -5,6 +5,10 @@
 
 imgNation is an MongoDB and React build social media platform where the user is able to make an account, sign in and start posting photos to share on the site. From the homepage, the user is able to view all posts on the platform and have the ability to like others photos. Clicking on or searching a users name will bring you to their profile page and you will be able to view all posts by that user.
 
+## Team Expectations
+
+https://docs.google.com/document/d/12Fyt2f0gGayo98UrFe_HYiu-wy9dhZ9IIOL-pEve3-U/edit
+
 ## Wireframes
 
 
