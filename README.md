@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # imgNation
 
 
@@ -139,9 +137,3 @@ Growth on our backend skills
 ### Threats:
 
 not letting the backend eat up to much of our time
-=======
-
->>>>>>> development
-=======
-
->>>>>>> origin/Chris
