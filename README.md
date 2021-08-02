@@ -33,7 +33,7 @@ Mobile Home Page
 
 ## Component Hierarchy
 
-![imageAlt](https://i.imgur.com/1wmliB9.png)
+![imageAlt](https://i.imgur.com/FyDV8Df.png)
 
 ## Schemas
 
