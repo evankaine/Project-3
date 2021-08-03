@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import './signin.css'
 import {createUser} from "../services/apiConfig"
 import { useHistory } from "react-router-dom"
 
@@ -27,20 +28,22 @@ export default function SignUp() {
     }
 
     return (
-        <div className="form-container">
-                <p>Don't have an account? Sign up!</p>
+      <div className="signInContainer">
+        <br />
+          <div className="title"> 
+            <h3>Sign In</h3>
+          </div>
                 <form onChange={handleChange} onSubmit={handleSubmit}>
+          <div className="input_wrap">
                 <input type="text" name="username" placeholder="Username" value={input.username} />
-          <br />
-          <br />
-                <input type="email" name="email" placeholder="Email" value={input.email} />
-          <br />
-          <br />
+
                 <input type="password" name="password" placeholder="Password" value={input.password} />
-          <br />
-          <br />
-                <button type="submit">Sign Up</button>
+          </div>
+          <div className="signInButton">
+            <button type="submit">Sign In</button>
+          </div>
             </form>
+        
         </div>
     )
 }
