@@ -20,6 +20,14 @@
   "url": "https://github.com/evankaine/imgNation/issues"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+  
+    
+  "@material-ui/icons": "^4.11.2",
+  
+    
+>>>>>>> a17003d5b42a638f1d5bbf2420b3a4c717485cad
   "cors": "^2.8.5",
   "express": "^4.17.1",
   "faker": "^5.5.3",
@@ -29,5 +37,9 @@
   "devDependencies": {
   "nodemon": "^2.0.12"
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> a17003d5b42a638f1d5bbf2420b3a4c717485cad
   "homepage": "https://github.com/evankaine/imgNation#readme"
 }
