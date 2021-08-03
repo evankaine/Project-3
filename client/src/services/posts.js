@@ -17,4 +17,4 @@ export const createPost = async (input) => {
   } catch (e) {
     throw e;
   }
-};
+}
