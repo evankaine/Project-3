@@ -1,25 +1,37 @@
-import axios from "axios";
+import axios from "axios"
+const apiURL = "http://localhost:4567/api"
 
-const getToken = () => {
-  return new Promise((resolve) => {
-    resolve(`Bearer ${localStorage.getItem("token") || null}`)
-  })
-
+//get all users
+export const getUsers = async () => {
+    const res = await axios.get(`${apiURL}/users`)
+    return res.data
 }
-// const api = axios.create({
-//   baseURL: process.env.NODE_ENV === 'production'
-//     ? ""
-//     : "http://localhost:4567/api"
-  
-// })
-
-api.interceptors.request.use(async (config) => {
-  config.headers["Authorization"] = await getToken()
-  return config 
-},
-  (error) => {
-    console.log("Request Error: ", error.message);
-    return Promise.reject(error)
-})
-
-export default api
+//get a user
+export const getUser = async (id) => {
+    const res = await axios.get(`${apiURL}/users/${id}`)
+    return res.data
+}
+//create a user
+export const createUser = async (user) => {
+    const res = await axios.post(`${apiURL}/users`,user)
+    return res.data
+}
+//get all posts
+export const getPosts = async () => {
+    const res = await axios.get(`${apiURL}/posts`)
+    return res.data
+}
+//get a post
+export const getPost = async (id) => {
+    const res = await axios.get(`${apiURL}/posts/${id}`)
+    return res.data
+}
+//create a post
+export const createPost = async (post) => {
+    const res = await axios.post(`${apiURL}/posts`, post)
+    return res.data
+}
+//delete a post
+export const deletePost = async (id) => {
+    const res = await axios.delete(`${apiURL}/posts/${id}`)
+} 
