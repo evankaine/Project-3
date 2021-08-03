@@ -2,13 +2,16 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import './Navbar.css'
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
-    <div>
-      <Link to="/">Home</Link>
+    <div className='navbar'>
       {props.user ? (
         <>
+          <div className='link'>
+            <Link to="/home">Home</Link>
+          </div>
           <header>imgNation</header>
           <div>{props.user?.username}</div>
           <Link to="new-post">Create a new post</Link>
@@ -21,10 +24,20 @@ export default function Navbar() {
           </div>
         </>
       ) : (
-        <div>
-          <Link to="/sign-up">Sign Up</Link>
-          <Link to="/sign-in">Sign In</Link>
-        </div>
+        <>
+          <div className='links'>
+            <header className='header'>imgNation</header>
+            <div className='link'>
+              <Link to="/home">Home</Link>
+            </div>
+            <div className='link'>
+              <Link to="/sign-up">Sign Up</Link>
+            </div>
+            <div className='link'>
+              <Link to="/sign-in">Sign In</Link>
+            </div>
+          </div>
+        </>
       )}
     </div>
   )

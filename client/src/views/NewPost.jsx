@@ -18,7 +18,7 @@ export default function NewPost(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createTodo(input);
-    history.push("/");
+    history.push("/home");
   };
   
   return (
