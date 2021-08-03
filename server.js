@@ -1,7 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
-const PORT = process.env.PORt || 4567
+const PORT = process.env.PORT || 2222
 const routes = require("./routes")
 const db = require('./db')
 db.on("error", console.error.bind(console, "Connection Error"))

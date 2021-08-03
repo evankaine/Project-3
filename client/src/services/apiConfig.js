@@ -1,5 +1,7 @@
 import axios from "axios"
-const apiURL = "http://localhost:4567/api"
+
+const apiURL = "http://localhost:2222/api"
+
 
 //get all users
 export const getUsers = async () => {
@@ -34,4 +36,5 @@ export const createPost = async (post) => {
 //delete a post
 export const deletePost = async (id) => {
     const res = await axios.delete(`${apiURL}/posts/${id}`)
+
 }
