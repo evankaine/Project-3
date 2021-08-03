@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './signin.css'
 import {createUser} from "../services/apiConfig"
 import { useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 export default function SignUp() {
@@ -28,10 +29,12 @@ export default function SignUp() {
     }
 
     return (
-      <div className="signInContainer">
-        <br />
-          <div className="title"> 
-            <h3>Sign In</h3>
+      <div className="wrapper">
+        <div className="form">
+          <div className="title">
+            <h1>imgNation</h1>
+            <br />
+            <h3>Sign In:</h3>
           </div>
                 <form onChange={handleChange} onSubmit={handleSubmit}>
           <div className="input_wrap">
@@ -39,11 +42,11 @@ export default function SignUp() {
 
                 <input type="password" name="password" placeholder="Password" value={input.password} />
           </div>
-          <div className="signInButton">
-            <button type="submit">Sign In</button>
-          </div>
+            <button className="raise" type="submit">Sign In</button>
+          
             </form>
-        
+            <p className="linkWrap">Don't have an account? Sign up <Link to="/signup" className="signUpLink">Here</Link></p>
+        </div>
         </div>
     )
 }

@@ -1,5 +1,7 @@
 import './App.css';
-import Login from "./views/Login"
+
+import SignUp from "./components/SignUp"
+import SignIn from "./components/SignIn"
 import UsersPage from './views/UsersPage'
 import Home from './views/Home'
 import {Route} from "react-router-dom"
@@ -9,7 +11,11 @@ function App() {
     <div className="App">
 
       <Route exact path="/">
-        <Login/>
+        <SignIn />
+      </Route>
+
+      <Route exact path="/signup">
+        <SignUp />
       </Route>
 
       <Route exact path="/home">

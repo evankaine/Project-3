@@ -1,6 +1,8 @@
 import {useState} from 'react'
 import {createUser} from "../services/apiConfig"
 import { useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
+import "./signup.css"
 
 
 export default function SignUp() {
@@ -27,20 +29,25 @@ export default function SignUp() {
     }
 
     return (
-        <div className="form-container">
-                <p>Don't have an account? Sign up!</p>
-                <form onChange={handleChange} onSubmit={handleSubmit}>
-                <input type="text" name="username" placeholder="Username" value={input.username} />
-          <br />
-          <br />
+      <div className="wrapper">
+        <div className="form">
+        <div className="title">
+            <h1>imgNation</h1>
+            <br />
+            <h3>Sign Up:</h3>
+        </div>
+            <form onChange={handleChange} onSubmit={handleSubmit}>
+          <div className="input_wrap">
+              <input type="text" name="username" placeholder="Username" value={input.username} />
+          
                 <input type="email" name="email" placeholder="Email" value={input.email} />
-          <br />
-          <br />
+          
                 <input type="password" name="password" placeholder="Password" value={input.password} />
-          <br />
-          <br />
-                <button type="submit">Sign Up</button>
-            </form>
+          </div>
+                <button className="raise" type="submit">Sign Up</button>
+          </form>
+          <p className="linkWrap"><Link to="/" className="signInLink">Back to Sign In</Link></p>
+          </div>
         </div>
     )
 }
