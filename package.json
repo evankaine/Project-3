@@ -49,6 +49,7 @@
   
   "dependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "bcrypt": "^5.0.1",
     "client": "^0.0.1",
     "cors": "^2.8.5",
@@ -78,6 +79,8 @@
     "url": "https://github.com/evankaine/imgNation/issues"
   },
 =======
+=======
+>>>>>>> e86b9bcfb497bc26a3584a87eedb05e5b73691e0
 
   
     
@@ -105,6 +108,9 @@
   },
   
 
+<<<<<<< HEAD
+>>>>>>> e86b9bcfb497bc26a3584a87eedb05e5b73691e0
+=======
 >>>>>>> e86b9bcfb497bc26a3584a87eedb05e5b73691e0
   "homepage": "https://github.com/evankaine/imgNation#readme"
 }
