@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div>
       <Link to="/">Home</Link>
