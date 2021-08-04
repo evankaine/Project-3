@@ -14,7 +14,7 @@ export default function Home() {
     }
     fetchAllPosts()
   }, [])
-  
+ 
   return (
     <div className='home-page'>
       <Navbar />
