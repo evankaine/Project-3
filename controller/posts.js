@@ -29,11 +29,11 @@ const getPost = async (req,res) => {
 //create a new post
 const createPost = async (req,res) => {
     try {
-        let {title, content, imgURL, user_id} = req.body
+        let {username, imgURL, caption, user_id} = req.body
         let newPost = {
-            title, 
-            content,
+            username, 
             imgURL,
+            caption,
             user_id,
         }
         //look for the user by the username that is coming in
