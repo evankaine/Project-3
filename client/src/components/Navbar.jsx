@@ -35,6 +35,9 @@ export default function Navbar(props) {
             </div>
             <div className='link'>
               <Link to="/sign-in">Sign In</Link>
+              </div>
+              <div className='link'>
+              <Link to="/user/:id">User</Link>
             </div>
           </div>
         </>
