@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./newpost.css"
-import {createPost} from "../services/apiConfig"
 import { useHistory } from "react-router";
 
 export default function NewPost(props) {
@@ -23,8 +22,6 @@ export default function NewPost(props) {
   };
   
   return (
-
-    <div className="wrapper" user={props.user} setUser={props.setUser}>
       <div className="form">
         <h1 className="title">Make a Post</h1>
         <form onSubmit={handleSubmit}>
