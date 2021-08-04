@@ -22,21 +22,25 @@ export default function User() {
       return (
         user.posts.map(post => {
           return (
-            <h5><Link to={`/post/${post._id}`}>
-              {post.caption}
-            </Link></h5>
+            <h5 className='single-post'>
+              <Link to={`/post/${post._id}`}>
+                {post.caption}
+              </Link>
+            </h5>
           )
         })
       )
     } else {
-      return < h5 > No Posts</h5 >
+      return <h5>No Posts</h5>
     }
 }
 return (
+  <div>
     <div>
-        
-        <h5>{`All posts: `}</h5>
-        {handlePosts()}
+      {/* Profile Picture */}
+    </div>
+      <h5>{`All posts: `}</h5>
+      {handlePosts()}
     </div>
 )
 }
