@@ -31,10 +31,10 @@ export default function Navbar(props) {
             <Link to="/home">Home</Link>
           </div>
           <div className='link'>
-            <Link to="/sign-up">Sign Up</Link>
+            <Link to="/signup">Sign Up</Link>
           </div>
           <div className='link'>
-            <Link to="/sign-in">Sign In</Link>
+            <Link to="/signin">Sign In</Link>
           </div>
           <div className='link'>
             <Link to="/user/:id">User</Link>
