@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './signin.css'
-import {getUser} from "../services/apiConfig"
+import {getUser} from "../../services/apiConfig"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 
