@@ -29,7 +29,7 @@ function App() {
         <UsersPage/>
       </Route>
 
-      <Route exact path="/new-post">
+      <Route exact path="/posts">
         <NewPost/>
       </Route>
 

@@ -3,7 +3,7 @@ import {createPost} from "../services/apiConfig"
 // import { createTodo } from "../../services/todos";
 import { useHistory } from "react-router";
 
-export default function NewPost(props) {
+export default function NewPost() {
   const [input, setInput] = useState({ username: "", imgURL: "", caption: "" , user_id: ""});
   const history = useHistory();
 
