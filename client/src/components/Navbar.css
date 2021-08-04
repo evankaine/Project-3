@@ -41,13 +41,14 @@ a:active {
   font-size: 20px;
   font-weight: 700;
   text-shadow: -2px 2px black;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .header {
   color: white;
   font-weight: 800;
-  font-size: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 25px 50px;
+  font-size: 55px;
+  font-family: "Style Script", cursive;
+  margin: 10px 50px 10px 0px;
   text-shadow: -2px 2px black;
 }
