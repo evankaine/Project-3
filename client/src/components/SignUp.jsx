@@ -46,7 +46,7 @@ export default function SignUp() {
           </div>
                 <button className="raise" type="submit">Sign Up</button>
           </form>
-          <p className="linkWrap"><Link to="/" className="signInLink">Back to Sign In</Link></p>
+          <p className="linkWrap"><Link to="/signin" className="signInLink">Back to Sign In</Link></p>
           </div>
         </div>
     )

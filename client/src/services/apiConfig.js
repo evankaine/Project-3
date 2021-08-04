@@ -7,13 +7,13 @@ export const getUsers = async () => {
     return res.data
 }
 //get a user
-export const getUser = async (id) => {
-    const res = await axios.get(`${apiURL}/users/${id}`)
+export const getUser = async (data) => {
+    const res = await axios.post(`${apiURL}/users/signin`, data)
     return res.data
 }
 //create a user
 export const createUser = async (user) => {
-    const res = await axios.post(`${apiURL}/users`,user)
+    const res = await axios.post(`${apiURL}/users/signup`, user)
     return res.data
 }
 //get all posts

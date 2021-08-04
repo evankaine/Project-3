@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
 
-      <Route exact path="/">
+      <Route exact path="/signin">
         <SignIn />
       </Route>
 
@@ -26,9 +26,9 @@ function App() {
         <UsersPage/>
       </Route>
 
-      <Route exact path="/new-posts">
+      {/* <Route exact path="/new-posts">
         <NewPost/>
-      </Route>
+      </Route> */}
     </div>
   );
 }
