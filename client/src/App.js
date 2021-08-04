@@ -1,7 +1,7 @@
 import './App.css';
 
 import SignUp from "./components/SignUp"
-import SignIn from "./components/SignIn"
+import SignIn from "./components/signin/SignIn"
 import UsersPage from './views/UsersPage'
 import Home from './views/Home'
 import NewPost from './views/NewPost'
@@ -30,9 +30,9 @@ function App() {
         <UsersPage/>
       </Route>
 
-      <Route exact path="/new-posts">
+      <Route exact path="/new-post">
         <NewPost />
-        </Route>
+      </Route>
     </div>
   );
 }

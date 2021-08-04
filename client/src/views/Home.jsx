@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar/Navbar'
 import './Home.css'
 import { useEffect, useState } from 'react'
 import { getPosts } from '../services/apiConfig'
