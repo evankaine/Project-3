@@ -7,6 +7,7 @@ import { useHistory } from "react-router";
 export default function NewPost(props) {
   const [input, setInput] = useState({ username: "", imgURL: "", caption: "" , user_id: ""});
   const history = useHistory();
+
   const handleChange = (e) => {
     const { id, value } = e.target;
 
@@ -23,9 +24,6 @@ export default function NewPost(props) {
   };
   
   return (
-  <div>
-      <NavBar />
-    <div className="wrapper-post" user={props.user} setUser={props.setUser}>
       <div className="form">
         <h1 className="title">Make a Post</h1>
         <form onSubmit={handleSubmit}>
@@ -45,7 +43,5 @@ export default function NewPost(props) {
           
         </form>
       </div>
-      </div>
-  </div>
   );
 }
