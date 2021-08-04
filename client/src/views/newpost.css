@@ -1,0 +1,40 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.form {
+  width: 400px;
+  height: auto;
+  background: #ffff;
+  padding: 35px 50px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+label{
+  text-transform: uppercase;
+}
+
+input {
+  margin: 5px 0px 0px 0px;
+  padding: 15px;
+  width: 100%;
+  border: 1px solid ;
+}
+
+button {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-top: 15;
+  color:#ffff;
+  background-color: #f16160;
+  border-color: #f4b661;
+}
+
+button:hover{
+  color: var(--def);
+  transition-delay: .0s;
+}
