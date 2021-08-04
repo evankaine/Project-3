@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./newpost.css"
 import {createPost} from "../services/apiConfig"
 // import { createTodo } from "../../services/todos";
 import { useHistory } from "react-router";
@@ -23,22 +24,25 @@ export default function NewPost(props) {
   };
   
   return (
-      <div>
-        New Post
+
+    <div className="wrapper" user={props.user} setUser={props.setUser}>
+      <div className="form">
+        <h1 className="title">Make a Post</h1>
         <form onSubmit={handleSubmit}>
-          <label>userName</label>
-          <br />
-          <input id="username" value={input.username} onChange={handleChange} />
-          <br />
-          <label>imgURL</label>
-          <br />
-          <input id="imgURL" value={input.imgURL} onChange={handleChange} />
-          <br />
-          <label>caption</label>
-          <br />
-          <input id="caption" value={input.caption} onChange={handleChange} />
-          <br />
-          <button>Create new Post</button>
+      <div className="input_wrap">
+          
+          <input id="username" placeholder="username" value={input.username} onChange={handleChange} />
+          
+          <input id="imgURL" placeholder="imgURL" value={input.imgURL} onChange={handleChange} />
+          
+          <input id="caption" placeholder="caption" value={input.caption} onChange={handleChange} />
+          
+          {/* <input id="user_id" placeholder="ID" value={input.user_id} onChange={handleChange} /> */}
+      </div>
+          <div className="postbutton">
+          <button className="raise">Create new Post</button>
+          </div>
+          
         </form>
       </div>
   );

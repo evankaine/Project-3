@@ -1,20 +1,20 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/navbar/Navbar'
 import './Home.css'
-import { useState, useEffect } from 'react'
-import {getPosts} from '../services/apiConfig'
+import { useEffect, useState } from 'react'
+import { getPosts } from '../services/apiConfig'
 
 export default function Home() {
-
-  const [posts, setPosts] = useState([])
+  const [posts, setPost] = useState([])
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchAllPosts = async () => {
       let data = await getPosts()
-      setPosts(data)
+      setPost(data)
     }
-    fetchPosts()
-  })
+    fetchAllPosts()
+  }, [])
+ 
   return (
     <div className='home-page'>
       <Navbar />

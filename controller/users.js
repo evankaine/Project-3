@@ -12,9 +12,10 @@ const getUsers = async (req,res) => {
     }
 }
 //get a user
-const getUser = async (req,res) => {
+const getUser = async (req, res) => {
+  const { email } = req.body
     try {
-        const user = await User.findById(req.params.id).populate("posts")
+      const user = await User.findOne({ "email" : email })
         if(user) {
             return res.status(200).json(user)
         } else {
@@ -24,6 +25,9 @@ const getUser = async (req,res) => {
         return res.status(500).json({error: err.message})
     }
 }
+//send values of inputs in sign in to backend
+//deconstruct the variables 
+//find parameters 
 //create a user
 const createUser = async (req,res) => {
     try {
