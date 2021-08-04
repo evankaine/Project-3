@@ -1,11 +1,10 @@
 import React from 'react'
-import UserPage from '../components/UserPage'
-import "./userPage.css"
+import User from '../components/User'
 
 export default function UserPage() {
   return (
     <div>
-      <UserPage/>
+      <User/>
     </div>
   )
 }
