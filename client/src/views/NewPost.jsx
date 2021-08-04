@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./newpost.css"
 import {createPost} from "../services/apiConfig"
-// import { createTodo } from "../../services/todos";
 import { useHistory } from "react-router";
 
 export default function NewPost(props) {
