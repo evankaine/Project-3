@@ -1,3 +1,4 @@
+
 const db = require('../db')
 const Post = require('../models/post.js')
 const User = require('../models/user.js')

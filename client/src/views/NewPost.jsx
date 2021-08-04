@@ -1,7 +1,5 @@
 import { useState } from "react";
 import "./newpost.css"
-import { createPost } from "../services/apiConfig"
-import NavBar from "../components/navbar/Navbar"
 import { useHistory } from "react-router";
 
 export default function NewPost(props) {
