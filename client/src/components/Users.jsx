@@ -13,6 +13,7 @@ export default function Users() {
         setData(res)
         console.log(res)
     }
+  // const showPosts 
 
     return (
         <div>
@@ -21,6 +22,7 @@ export default function Users() {
                 <div key={user._id}>
                     <h4>{user.username}</h4>
                     <p>{user.email}</p>
+                    
                 
                 </div>
                 )
