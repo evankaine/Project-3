@@ -1,8 +1,11 @@
+
+
 .wrapper{
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to right, #f4b661, #f16160);
 }
 
 .form{
