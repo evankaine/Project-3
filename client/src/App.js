@@ -6,6 +6,7 @@ import UsersPage from './views/UsersPage'
 import Home from './views/Home'
 import NewPost from './views/NewPost'
 import {Route} from "react-router-dom"
+
 //all the routes and paths
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
 
       <Route exact path="/new-posts">
         <NewPost/>
+      </Route>
+
+      <Route exact path="/user/:id">
+        <UserPage/>
       </Route>
     </div>
   );
