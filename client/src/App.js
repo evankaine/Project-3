@@ -35,7 +35,11 @@ function App() {
       </Route>
 
       <Route exact path="/new-post">
-        <NewPost />
+        <NewPost/>
+      </Route>
+
+      <Route exact path="/user/:id">
+        <UserPage/>
       </Route>
     </div>
   );
