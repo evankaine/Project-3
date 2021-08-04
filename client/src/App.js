@@ -4,9 +4,8 @@ import SignUp from "./components/SignUp"
 import SignIn from "./components/SignIn"
 import UsersPage from './views/UsersPage'
 import Home from './views/Home'
-import { Route } from "react-router-dom"
-import UserPage from './views/UserPage';
-import NewPost from './views/NewPost';
+import NewPost from './views/NewPost'
+import {Route} from "react-router-dom"
 
 //all the routes and paths
 function App() {
