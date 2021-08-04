@@ -5,6 +5,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import './Navbar.css'
 
 export default function Navbar(props) {
+
   return (
     <div className='navbar'>
       {props.user ? (
@@ -31,14 +32,14 @@ export default function Navbar(props) {
               <Link to="/home">Home</Link>
             </div>
             <div className='link'>
-              <Link to="/sign-up">Sign Up</Link>
-            </div>
-            <div className='link'>
               <Link to="/sign-in">Sign In</Link>
               </div>
               <div className='link'>
               <Link to="/user/:id">User</Link>
-            </div>
+              </div>
+              <div className='link'>
+                <Link to="">Sign out</Link>
+              </div>
           </div>
         </>
       )}
