@@ -4,7 +4,10 @@ import SignUp from "./components/SignUp"
 import SignIn from "./components/SignIn"
 import UsersPage from './views/UsersPage'
 import Home from './views/Home'
-import {Route} from "react-router-dom"
+import NewPost from './views/NewPost'
+import { Route } from "react-router-dom"
+import UserPage from './views/UserPage'
+
 //all the routes and paths
 function App() {
   return (
@@ -26,9 +29,9 @@ function App() {
         <UsersPage/>
       </Route>
 
-      {/* <Route exact path="/new-posts">
-        <NewPost/>
-      </Route> */}
+      <Route exact path="/new-posts">
+        <NewPost />
+        </Route>
     </div>
   );
 }

@@ -1,13 +1,13 @@
 a {
-  color: white;
+  color: black;
 }
 
 a:hover {
-  color: rgb(233, 100, 88);
+  font-size: 22px;
 }
 
 .navbar {
-  background-color: rgb(67, 133, 238);
+  background: linear-gradient(90deg, #f4b661, #f16160);
 }
 
 a:link {
@@ -23,23 +23,43 @@ a:active {
   text-decoration: none;
 }
 
-.links {
+.title {
+  color: black;
+  font-weight: 800;
+  font-size: 55px;
+  font-family: "Style Script", cursive;
+  text-shadow: -2px 2px white;
+  margin: 10px 0px;
+}
+
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px 0px 0px 50px;
+}
+
 .link {
-  display: inline;
-  margin: 25px 100px;
+  margin: 25px 50px;
   font-size: 20px;
   font-weight: 700;
+  text-shadow: -1.5px 1.5px white;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .header {
   color: white;
   font-weight: 800;
-  font-size: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 55px;
+  font-family: "Style Script", cursive;
+  margin: 10px 50px 10px 0px;
+  text-shadow: -2px 2px black;
 }
