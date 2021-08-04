@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import './Home.css'
 
-export default function Home() {
+export default function Home(posts) {
   return (
     <div className='home-page'>
       <Navbar />

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Layout from "../../components/Layout/Layout";
-import { createTodo } from "../../services/todos";
+import {createPost} from "../services/apiConfig"
+// import { createTodo } from "../../services/todos";
 import { useHistory } from "react-router";
 
 export default function NewPost(props) {
@@ -17,12 +17,12 @@ export default function NewPost(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await createTodo(input);
+    await createPost(input);
     history.push("/home");
   };
   
   return (
-    <Layout user={props.user} setUser={props.setUser}>
+    <div user={props.user} setUser={props.setUser}>
       <div>
         New Post
         <form onSubmit={handleSubmit}>
@@ -45,6 +45,6 @@ export default function NewPost(props) {
           <button>Create new Post</button>
         </form>
       </div>
-    </Layout>
+    </div>
   );
 }
