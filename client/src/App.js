@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
 
-      <Route exact path="/">
+      <Route exact path="/signin">
         <SignIn />
       </Route>
 
@@ -31,12 +31,8 @@ function App() {
       </Route>
 
       <Route exact path="/new-posts">
-        <NewPost/>
-      </Route>
-
-      <Route exact path="/user/:id">
-        <UserPage/>
-      </Route>
+        <NewPost />
+        </Route>
     </div>
   );
 }
