@@ -12,6 +12,7 @@ a:hover {
 
 a:link {
   text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
 }
 a:visited {
   text-decoration: none;
