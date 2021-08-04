@@ -24,23 +24,23 @@ export default function Navbar(props) {
           </div>
         </>
       ) : (
-        <>
+        <div className='nav'>
+          <header className='title'>imgNation</header>
           <div className='links'>
-            <header className='header'>imgNation</header>
-            <div className='link'>
-              <Link to="/home">Home</Link>
-            </div>
-            <div className='link'>
-              <Link to="/sign-up">Sign Up</Link>
-            </div>
-            <div className='link'>
-              <Link to="/sign-in">Sign In</Link>
-              </div>
-              <div className='link'>
-              <Link to="/user/:id">User</Link>
-            </div>
+          <div className='link'>
+            <Link to="/home">Home</Link>
           </div>
-        </>
+          <div className='link'>
+            <Link to="/sign-up">Sign Up</Link>
+          </div>
+          <div className='link'>
+            <Link to="/sign-in">Sign In</Link>
+          </div>
+          <div className='link'>
+            <Link to="/user/:id">User</Link>
+          </div>
+          </div>
+        </div>
       )}
     </div>
   )
