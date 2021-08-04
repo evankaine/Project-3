@@ -34,7 +34,7 @@ function App() {
         <UserPage/>
       </Route>
 
-      <Route exact path="/new-post">
+      <Route exact path="/posts">
         <NewPost/>
       </Route>
 
