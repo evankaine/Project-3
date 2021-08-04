@@ -8,6 +8,7 @@ import NewPost from './views/NewPost'
 import { Route } from "react-router-dom"
 import UserPage from './views/UserPage'
 
+
 //all the routes and paths
 function App() {
   return (
