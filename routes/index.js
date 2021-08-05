@@ -1,9 +1,12 @@
-const {Router} = require('express')
-const postRouter = require('./posts.js')
-const userRouter = require("./users.js")
 
-const router = Router()
-router.use("/posts", postRouter)
-router.use("/", userRouter)
+const { Router } = require('express')
+
+import usersRoutes from "./user.js";
+
+const router = Router();
+
+router.get("/", (req, res) => res.send("This is api root"));
+
+router.use("/", usersRoutes);
 
 module.exports = router 

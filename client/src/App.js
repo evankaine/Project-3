@@ -48,7 +48,7 @@ function App() {
             <SignIn user={user} setUser={setUser} />
           </Route>
 
-          <Route exact path="/signup">
+          <Route exact path="/sign-up">
             <SignUp user={user} setUser={setUser} />
           </Route>
         </>
