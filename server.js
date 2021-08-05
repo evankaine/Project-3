@@ -1,7 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
-const routes = require("./routes")
+import routes from './routes/index.js'
 const db = require('./db')
 db.on("error", console.error.bind(console, "Connection Error"))
 
