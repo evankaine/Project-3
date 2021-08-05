@@ -1,12 +1,12 @@
-const express = require("express")
-const cors = require("cors")
-const morgan = require("morgan")
-const routes = require("./routes")
-const db = require('./db')
-db.on("error", console.error.bind(console, "Connection Error"))
+import express from "express";
+import cors from "cors";
+import morgan from "morgan";
+
+import db from "./db/connection.js";
+import routes from "./routes/index.js";
 
 const app = express();
-const PORT = process.env.PORT || 2222;
+const PORT = process.env.PORT || 4567;
 
 // gives access to req.body
 app.use(express.json());
