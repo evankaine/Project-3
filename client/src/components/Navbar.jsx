@@ -35,11 +35,7 @@ export default function Navbar(props) {
             <Link to="/signup">Sign Up</Link>
           </div>
           <div className='link'>
-<<<<<<< HEAD:client/src/components/navbar/Navbar.jsx
-            <Link to="/signin">Sign In</Link>
-=======
             <Link to="/">Sign In</Link>
->>>>>>> d01ac63323b3d9fd67111d42a0ae95c9fbb715e7:client/src/components/Navbar.jsx
           </div>
           <div className='link'>
             <Link to="/user/:id">User</Link>
