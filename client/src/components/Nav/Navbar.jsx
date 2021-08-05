@@ -3,14 +3,23 @@ import { Link } from "react-router-dom"
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import './Navbar.css'
+import { signOut } from "../../services/users";
 
 export default function Navbar(props) {
+
+
+  const handleSignOut = () => {
+    signOut();
+    props.setUser(null);
+  };
+
+
   return (
     <div className='navbar'>
       {props.user ? (
         <>
           <div className='link'>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </div>
           <header>imgNation</header>
           <div>{props.user?.username}</div>
@@ -22,19 +31,20 @@ export default function Navbar(props) {
             <AddAPhotoIcon className='add-photo-icon' />
             <AccountCircleIcon className='account-icon' />
           </div>
+          <button onClick={handleSignOut}>Sign Out</button>
         </>
       ) : (
         <div className='nav'>
           <header className='title'>imgNation</header>
           <div className='links'>
           <div className='link'>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </div>
           <div className='link'>
-            <Link to="/signup">Sign Up</Link>
+            <Link to="/sign-up">Sign Up</Link>
           </div>
           <div className='link'>
-            <Link to="/">Sign In</Link>
+            <Link to="/sign-in">Sign In</Link>
           </div>
           <div className='link'>
             <Link to="/user/:id">User</Link>

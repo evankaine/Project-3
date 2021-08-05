@@ -1,14 +1,15 @@
-import {useState} from 'react'
-import {signUp} from "../services/users"
+import { useState } from 'react'
+import './SignIn.css'
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
-import "./signup.css"
+import { signIn } from '../../services/users'
 
-export default function SignUp(props) {
-    let history = useHistory()
-    const [input, setInput] = useState({username: "", email: "", password: ""})
-
-    const handleChange = (e) => {
+export default function SignIn(props) {
+  const [input, setInput] = useState({email: "", password: ""})
+  const {setUser} = props
+  let history = useHistory()
+  
+    function handleChange(e) {
         let {id, value} = e.target
         setInput((prevInput) => ({
             ...prevInput,
@@ -18,8 +19,8 @@ export default function SignUp(props) {
 
     const handleSubmit = async (e) => {
       e.preventDefault()
-      const user = await signUp(input)
-      props.setuser(user)
+      const user = await signIn(input)
+      setUser(user)
       history.push("/")
     }
 
@@ -29,19 +30,10 @@ export default function SignUp(props) {
             <div className="title">
               <h1>imgNation</h1>
               <br />
-              <h3>Sign Up:</h3>
+              <h3>Sign In:</h3>
             </div>
             <form onSubmit={handleSubmit}>
               <div className="input_wrap">
-              
-                <input
-                  id="username"
-                  type="text"
-                  placeholder="Username"
-                  value={input.username}
-                  onChange={handleChange}
-                />
-          
                 <input
                   id="email"
                   type="email"
@@ -49,7 +41,7 @@ export default function SignUp(props) {
                   value={input.email}
                   onChange={handleChange}
                 />
-          
+
                 <input
                   id="password"
                   type="password"
@@ -59,11 +51,9 @@ export default function SignUp(props) {
                 />
               
               </div>
-              <button className="raise" type="submit">Sign Up</button>
+              <button className="raise" type="submit">Sign In</button>
             </form>
-            <p className="linkWrap">
-              <Link to="/" className="signInLink">Back to Sign In</Link>
-            </p>
+            <p className="linkWrap">Don't have an account? Sign up <Link to="/sign-up" className="signUpLink">Here</Link></p>
           </div>
         </div>
     )

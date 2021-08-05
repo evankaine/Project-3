@@ -5,7 +5,7 @@ import db from "./db/connection.js";
 import routes from "./routes/index.js";
 
 const app = express();
-const PORT = process.env.PORT || 4567;
+const PORT = process.env.PORT || 2222;
 
 // gives access to req.body
 app.use(express.json());

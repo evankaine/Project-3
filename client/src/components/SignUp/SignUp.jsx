@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import './signin.css'
+import {useState} from 'react'
+import {signUp} from "../../services/users"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { signIn } from '../services/users'
+import "./SignUp.css"
 
 export default function SignUp(props) {
-  const [input, setInput] = useState({email: "", password: ""})
-  const {setUser} = props
-  let history = useHistory()
-  
-    function handleChange(e) {
+    let history = useHistory()
+    const [input, setInput] = useState({username: "", email: "", password: ""})
+
+    const handleChange = (e) => {
         let {id, value} = e.target
         setInput((prevInput) => ({
             ...prevInput,
@@ -19,8 +18,8 @@ export default function SignUp(props) {
 
     const handleSubmit = async (e) => {
       e.preventDefault()
-      const user = await signIn(input)
-      setUser(user)
+      const user = await signUp(input)
+      props.setUser(user)
       history.push("/")
     }
 
@@ -30,10 +29,19 @@ export default function SignUp(props) {
             <div className="title">
               <h1>imgNation</h1>
               <br />
-              <h3>Sign In:</h3>
+              <h3>Sign Up:</h3>
             </div>
             <form onSubmit={handleSubmit}>
               <div className="input_wrap">
+              
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Username"
+                  value={input.username}
+                  onChange={handleChange}
+                />
+          
                 <input
                   id="email"
                   type="email"
@@ -41,7 +49,7 @@ export default function SignUp(props) {
                   value={input.email}
                   onChange={handleChange}
                 />
-
+          
                 <input
                   id="password"
                   type="password"
@@ -51,9 +59,11 @@ export default function SignUp(props) {
                 />
               
               </div>
-              <button className="raise" type="submit">Sign In</button>
+              <button className="raise" type="submit">Sign Up</button>
             </form>
-            <p className="linkWrap">Don't have an account? Sign up <Link to="/signup" className="signUpLink">Here</Link></p>
+            <p className="linkWrap">
+              <Link to="/sign-in" className="signInLink">Back to Sign In</Link>
+            </p>
           </div>
         </div>
     )
