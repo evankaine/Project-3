@@ -1,34 +1,38 @@
 import React from 'react'
-import Navbar from '../components/navbar/Navbar'
 import './Home.css'
-import { useEffect, useState } from 'react'
-import { getPosts } from '../services/apiConfig'
+import { useState, useEffect } from 'react'
+import { getPosts } from '../services/posts'
+import Layout from '../components/Layout'
 import { Link } from 'react-router-dom'
 
-export default function Home() {
-  const [posts, setPost] = useState([])
+export default function Home(props) {
+
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    const fetchAllPosts = async () => {
+    const fetchPosts = async () => {
       let data = await getPosts()
-      setPost(data)
+      setPosts(data)
     }
-    fetchAllPosts()
+    fetchPosts()
   }, [])
-  
+
   return (
-    <div className='home-page'>
-      <Navbar />
+    <Layout user={props.user} setUser={props.setUser}>
+      <div className='home-page'>
       <div className="link-post">
         <Link to="posts">Create a post</Link>
       </div>
       <div className='all-posts'>
       {posts.map((post) => {
-        <div className='post'>
-          {post}
-        </div>
+        return (
+          <div className='post'>
+            {post}
+          </div>
+        )
       })}
       </div>
     </div>
+    </Layout>
   )
 }

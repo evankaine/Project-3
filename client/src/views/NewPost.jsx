@@ -1,14 +1,15 @@
 import { useState } from "react";
-import "./newpost.css"
-import {createPost} from "../services/apiConfig"
+import {createPost} from "../services/posts"
 import { useHistory } from "react-router";
+import Layout from '../components/Layout'
+import "./newPost.css"
 
-export default function NewPost() {
-  const [input, setInput] = useState({ username: "", imgURL: "", caption: "" });
+export default function NewPost(props) {
+  const [input, setInput] = useState({ username: "", imgURL: "", caption: ""});
   const history = useHistory();
+
   const handleChange = (e) => {
     const { id, value } = e.target;
-
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
@@ -22,25 +23,25 @@ export default function NewPost() {
   };
   
   return (
-    <div className="wrapper" >
-      <div className="form">
-        <h1 className="title">Make a Post</h1>
+    <Layout user={props.user} setUser={props.setUser}>
+      <div>
+        New Post
         <form onSubmit={handleSubmit}>
-      <div className="input_wrap">
-          
-          <input id="username" placeholder="username" value={input.username} onChange={handleChange} />
-          
-          <input id="imgURL" placeholder="imgURL" value={input.imgURL} onChange={handleChange} />
-          
-          <input id="caption" placeholder="caption" value={input.caption} onChange={handleChange} />
-          
-      </div>
-          <div className="postbutton">
-          <button className="raise">Create new Post</button>
-          </div>
-          
+          <label>userName</label>
+          <br />
+          <input id="username" value={input.username} onChange={handleChange} />
+          <br />
+          <label>imgURL</label>
+          <br />
+          <input id="imgURL" value={input.imgURL} onChange={handleChange} />
+          <br />
+          <label>caption</label>
+          <br />
+          <input id="caption" value={input.caption} onChange={handleChange} />
+          <br />
+          <button>Create new Post</button>
         </form>
       </div>
-    </div>
+    </Layout>
   );
 }

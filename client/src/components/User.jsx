@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import {getUser} from "../services/apiConfig"
+import { verify } from "../services/users"
 
 export default function User() {
 
@@ -13,10 +13,11 @@ export default function User() {
   }, [])
   
   async function handleData() {
-    let res = await getUser(id)
+    let res = await verify(id)
     setUser(res)
     console.log(res)
   }
+
   function handlePosts() {
     if (user.posts) {
       return (
