@@ -1,4 +1,4 @@
-const {Router} = require('express')
+import { Router } from "express";
 import { signUp, signIn, verify } from "../controllers/users.js";
 
 const router = Router();
@@ -10,5 +10,4 @@ router.post("/sign-in", signIn);
 // Verify : GET
 router.get("/verify", verify);
 
-
-module.exports = router 
+export default router;

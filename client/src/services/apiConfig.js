@@ -9,8 +9,7 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "https://boiling-anchorage-62947.herokuapp.com/api"
-      : "http://localhost:4567/api",
+      ? "http://localhost:2222/api" : null,
 });
 
 api.interceptors.request.use(
