@@ -33,12 +33,12 @@ a:active {
   margin: 10px 0px;
 }
 
-.nav {
+/* .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 
 .links {
   display: flex;
