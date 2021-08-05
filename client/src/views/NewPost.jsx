@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "./newpost.css"
 import {createPost} from "../services/apiConfig"
-// import { createTodo } from "../../services/todos";
 import { useHistory } from "react-router";
 
-export default function NewPost(props) {
-  const [input, setInput] = useState({ username: "", imgURL: "", caption: "" , user_id: ""});
+export default function NewPost() {
+  const [input, setInput] = useState({ username: "", imgURL: "", caption: "" });
   const history = useHistory();
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -23,7 +22,7 @@ export default function NewPost(props) {
   };
   
   return (
-    <div className="wrapper" user={props.user} setUser={props.setUser}>
+    <div className="wrapper" >
       <div className="form">
         <h1 className="title">Make a Post</h1>
         <form onSubmit={handleSubmit}>
@@ -35,7 +34,6 @@ export default function NewPost(props) {
           
           <input id="caption" placeholder="caption" value={input.caption} onChange={handleChange} />
           
-          {/* <input id="user_id" placeholder="ID" value={input.user_id} onChange={handleChange} /> */}
       </div>
           <div className="postbutton">
           <button className="raise">Create new Post</button>

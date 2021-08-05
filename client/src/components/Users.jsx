@@ -22,7 +22,7 @@ export default function Users() {
                 <div key={user._id}>
                     <h4>{user.username}</h4>
                     <p>{user.email}</p>
-                    
+                    <img>{user.posts}</img>
                 
                 </div>
                 )
