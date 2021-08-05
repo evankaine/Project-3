@@ -1,9 +1,10 @@
-const {Router} = require('express')
-const postRouter = require('./posts.js')
-const userRouter = require("./users.js")
+import { Router } from "express";
+import usersRoutes from "./user.js";
 
-const router = Router()
-router.use("/posts", postRouter)
-router.use("/", userRouter)
+const router = Router();
 
-module.exports = router 
+router.get("/", (req, res) => res.send("This is api root"));
+router.use("/", usersRoutes);
+router.use('/', postRoutes)
+
+export default router;

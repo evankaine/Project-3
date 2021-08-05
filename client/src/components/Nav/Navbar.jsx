@@ -3,14 +3,23 @@ import { Link } from "react-router-dom"
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import './Navbar.css'
+import { signOut } from "../../services/users";
 
 export default function Navbar(props) {
+
+
+  const handleSignOut = () => {
+    signOut();
+    props.setUser(null);
+  };
+
+
   return (
-    <div className='navbar'>
+    <div className='accountNav'>
       {props.user ? (
         <>
-          <div className='link'>
-            <Link to="/home">Home</Link>
+          <div className='accountNav-links'>
+            <Link to="/">Home</Link>
           </div>
           <header>imgNation</header>
           <div>{props.user?.username}</div>
@@ -22,23 +31,18 @@ export default function Navbar(props) {
             <AddAPhotoIcon className='add-photo-icon' />
             <AccountCircleIcon className='account-icon' />
           </div>
+          <button onClick={handleSignOut}>Sign Out</button>
         </>
       ) : (
-        <div className='nav'>
-          <header className='title'>imgNation</header>
-          <div className='links'>
-          <div className='link'>
-            <Link to="/home">Home</Link>
-          </div>
-          <div className='link'>
-            <Link to="/signup">Sign Up</Link>
-          </div>
-          <div className='link'>
-            <Link to="/signin">Sign In</Link>
-          </div>
-          <div className='link'>
-            <Link to="/user/:id">User</Link>
-          </div>
+        <div className='siteNav'>
+          
+          <div className='siteLink'>
+              <Link to="/sign-in" className='siteLogo'>
+                imgNation
+                <br />
+                <p className="siteLink-tag">Enter Site</p>
+              </Link>
+          
           </div>
         </div>
       )}

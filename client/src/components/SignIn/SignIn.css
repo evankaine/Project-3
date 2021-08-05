@@ -1,0 +1,100 @@
+
+
+.wrapper{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f4b661, #f16160);
+}
+
+.form{
+  width: 425px;
+  height: auto;
+  background: #fff;
+  padding: 35px 50px;
+  border-radius: 2px;
+}
+
+.form .title{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+h1 {
+  font-family: 'Style Script', cursive;
+  letter-spacing: 2px;
+  font-size: 80px;
+}
+
+h3 {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+  .form .input_wrap{
+    margin-bottom: 20px;
+    width: 325px;
+    position: relative;
+  }
+
+  input {
+    margin: 10px 0px 0px 0px;
+  }
+
+  .form .input_wrap:last-child{
+    margin-bottom: 0;
+  }
+
+  .form .input_wrap input{
+    padding: 15px;
+    width: 100%;
+    border: 1px solid transparent;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+
+  .form .input_wrap input{
+    background: #f5f4f4;
+    padding-right: 35px;
+  }
+
+  .form .input_wrap input:focus{
+    border-color: #f16160;
+  }
+  
+.raise{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #f4b661;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid transparent;
+    position: relative;	
+    cursor: pointer;
+    user-select: none;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 5px 10px rgb(135, 130, 130);
+  transition: box-shadow 0.3s ease-in-out;
+  transform: translateY(-0.5em);
+}
+
+.linkWrap {
+  margin: 20px 0px 0px 0px;
+}
+
+.signUpLink:link {
+  color:#f16160;
+}
+
+.signUpLink:visited {
+  color: #f4b661;
+}
+
+.signUpLink:hover {
+  color: #f16160;
+}

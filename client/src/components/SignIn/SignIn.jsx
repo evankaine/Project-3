@@ -1,16 +1,16 @@
-import {useState} from 'react'
-import {createUser} from "../services/apiConfig"
+import { useState } from 'react'
+import './signin.css'
+import {getUser} from "../../services/apiConfig"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
-import "./signup.css"
 
 
-export default function SignUp() {
+export default function SignIn() {
     let history = useHistory()
     let defaultInput = {
-        username: "",
+      username: "",
       email: "",
-        password: "",
+      password: "",
     }
     const [input, setInput] = useState(defaultInput)
 
@@ -24,30 +24,28 @@ export default function SignUp() {
 
     async function handleSubmit(event) {
         event.preventDefault()
-        await createUser(input)
-        history.push("/home")
+        await getUser(input)
+        history.push(`/home`)
     }
 
     return (
       <div className="wrapper">
         <div className="form">
-        <div className="title">
+          <div className="title">
             <h1>imgNation</h1>
             <br />
-            <h3>Sign Up:</h3>
-        </div>
+            <h3>Sign In:</h3>
+          </div>
             <form onChange={handleChange} onSubmit={handleSubmit}>
           <div className="input_wrap">
               <input type="text" name="username" placeholder="Username" value={input.username} />
-          
-                <input type="email" name="email" placeholder="Email" value={input.email} />
-          
-                <input type="password" name="password" placeholder="Password" value={input.password} />
+              <input type="email" name="email" placeholder="Email" value={input.email} />
+            <input type="password" name="password" placeholder="Password" value={input.password} />
           </div>
-                <button className="raise" type="submit">Sign Up</button>
-          </form>
-          <p className="linkWrap"><Link to="/signin" className="signInLink">Back to Sign In</Link></p>
-          </div>
+            <button className="raise" type="submit">Sign In</button>
+            </form>
+            <p className="linkWrap">Don't have an account? Sign up <Link to="/signup" className="signUpLink">Here</Link></p>
         </div>
+      </div>
     )
 }
