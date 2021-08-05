@@ -20,4 +20,8 @@
 }
 
 .post {
+  background-color: blueviolet;
+  display: grid;
+  height: auto;
+  width: 100%;
 }

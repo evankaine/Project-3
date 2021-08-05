@@ -29,8 +29,8 @@ export const getPost = async (id) => {
     return res.data
 }
 //create a post
-export const createPost = async (input) => {
-    const res = await axios.post(`${apiURL}/posts`, input)
+export const createPost = async (post) => {
+    const res = await axios.post(`${apiURL}/posts`, post)
     return res.data
 }
 //delete a post
