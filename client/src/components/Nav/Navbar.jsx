@@ -15,10 +15,10 @@ export default function Navbar(props) {
 
 
   return (
-    <div className='navbar'>
+    <div className='accountNav'>
       {props.user ? (
         <>
-          <div className='link'>
+          <div className='accountNav-links'>
             <Link to="/">Home</Link>
           </div>
           <header>imgNation</header>
@@ -34,21 +34,15 @@ export default function Navbar(props) {
           <button onClick={handleSignOut}>Sign Out</button>
         </>
       ) : (
-        <div className='nav'>
-          <header className='title'>imgNation</header>
-          <div className='links'>
-          <div className='link'>
-            <Link to="/">Home</Link>
-          </div>
-          <div className='link'>
-            <Link to="/sign-up">Sign Up</Link>
-          </div>
-          <div className='link'>
-            <Link to="/sign-in">Sign In</Link>
-          </div>
-          <div className='link'>
-            <Link to="/user/:id">User</Link>
-          </div>
+        <div className='siteNav'>
+          
+          <div className='siteLink'>
+              <Link to="/sign-in" className='siteLogo'>
+                imgNation
+                <br />
+                <p className="siteLink-tag">Enter Site</p>
+              </Link>
+          
           </div>
         </div>
       )}
