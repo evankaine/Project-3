@@ -9,7 +9,7 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "http://localhost:2222/api" : null,
+      ? null : "http://localhost:2222/api",
 });
 
 api.interceptors.request.use(

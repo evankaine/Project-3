@@ -19,7 +19,7 @@ export default function SignUp(props) {
     const handleSubmit = async (e) => {
       e.preventDefault()
       const user = await signUp(input)
-      props.setuser(user)
+      props.setUser(user)
       history.push("/")
     }
 
