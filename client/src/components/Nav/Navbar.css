@@ -3,14 +3,14 @@ a {
   text-decoration: none;
 }
 
-
-
 .navbar {
   background: linear-gradient(90deg, #f4b661, #f16160);
 }
 
+
+
 .siteNav {
-  margin: 250px 0px 150px 0px;
+  margin: 300px 0px 200px 0px;
 }
 
 .siteLink {
@@ -24,7 +24,7 @@ a {
 
 @keyframes floating {
   0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
+  50%  { transform: translate(0, 20px); }
   100%   { transform: translate(0, -0px); }   
 }
 
