@@ -9,6 +9,7 @@ import UserPage from './views/UserPage'
 import { useState, useEffect } from 'react'
 import { verify } from './services/users'
 
+
 //all the routes and paths
 function App() {
 
