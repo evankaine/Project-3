@@ -1,8 +1,8 @@
 import './App.css';
-import SignUp from "./components/SignUp"
-import SignIn from "./components/SignIn"
+import SignUp from "./components/SignUp/SignUp"
+import SignIn from "./components/SignIn/SignIn"
 import UsersPage from './views/UsersPage'
-import Home from './views/Home'
+import Home from './views/Home/Home'
 import NewPost from './views/NewPost'
 import { Route } from "react-router-dom"
 import UserPage from './views/UserPage'
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
 
-      <Route exact path="/home">
+      <Route exact path="/">
         <Home user={user} setUser={setUser} />
       </Route>
       {user && (
@@ -45,7 +45,7 @@ function App() {
       )}
       {!user && (
         <>
-          <Route exact path="/">
+          <Route exact path="/sign-in">
             <SignIn user={user} setUser={setUser} />
           </Route>
 

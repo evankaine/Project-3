@@ -1,8 +1,7 @@
 import { useState } from "react";
 import {createPost} from "../services/posts"
 import { useHistory } from "react-router";
-import Layout from '../components/Layout'
-import "./newPost.css"
+import Layout from '../components/Layout/Layout'
 
 export default function NewPost(props) {
   const [input, setInput] = useState({ username: "", imgURL: "", caption: ""});

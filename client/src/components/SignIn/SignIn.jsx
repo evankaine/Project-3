@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import './signin.css'
+import './SignIn.css'
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { signIn } from '../services/users'
+import { signIn } from '../../services/users'
 
-export default function SignUp(props) {
+export default function SignIn(props) {
   const [input, setInput] = useState({email: "", password: ""})
   const {setUser} = props
   let history = useHistory()
