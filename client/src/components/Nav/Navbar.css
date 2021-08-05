@@ -7,25 +7,29 @@ a {
   background: linear-gradient(90deg, #f4b661, #f16160);
 }
 
-
-
 .siteNav {
   margin: 300px 0px 200px 0px;
 }
 
 .siteLink {
   animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    
-    margin-top: 5px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  margin-top: 5px;
 }
 
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 20px); }
-  100%   { transform: translate(0, -0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
 .siteLogo {
@@ -37,6 +41,6 @@ a {
 }
 
 .siteLink-tag {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
 }

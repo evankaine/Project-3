@@ -23,13 +23,16 @@ export default function Navbar(props) {
           </div>
           <header>imgNation</header>
           <div>{props.user?.username}</div>
-          <Link to="new-post">Create a new post</Link>
           <form>
             <input className='search-bar' placeholder='Search...'></input>
           </form>
           <div>
-            <AddAPhotoIcon className='add-photo-icon' />
-            <AccountCircleIcon className='account-icon' />
+            <Link to="/posts">
+              <AddAPhotoIcon className='add-photo-icon' />
+            </Link>
+            {/* <Link to="/user"> */}
+              <AccountCircleIcon className='account-icon' />
+            {/* </Link> */}
           </div>
           <button onClick={handleSignOut}>Sign Out</button>
         </>
