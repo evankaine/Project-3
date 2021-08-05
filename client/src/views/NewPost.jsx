@@ -3,14 +3,14 @@ import "./newpost.css"
 import {createPost} from "../services/apiConfig"
 // import { createTodo } from "../../services/todos";
 import { useHistory } from "react-router";
+import Layout from '../components/Layout/Layout'
 
 export default function NewPost(props) {
-  const [input, setInput] = useState({ username: "", imgURL: "", caption: "" , user_id: ""});
+  const [input, setInput] = useState({ username: "", imgURL: "", caption: ""});
   const history = useHistory();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
@@ -24,7 +24,7 @@ export default function NewPost(props) {
   };
   
   return (
-
+    <Layout>
     <div className="wrapper" user={props.user} setUser={props.setUser}>
       <div className="form">
         <h1 className="title">Make a Post</h1>
@@ -44,6 +44,8 @@ export default function NewPost(props) {
           </div>
           
         </form>
-      </div>
+        </div>
+        </div>
+    </Layout>
   );
 }

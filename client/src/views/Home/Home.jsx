@@ -16,15 +16,18 @@ export default function Home() {
   }, [])
  
   return (
+    <Layout user={props.user} setUser={props.setUser}>
     <div className='home-page'>
-      <Navbar />
       <div className='all-posts'>
       {posts.map((post) => {
-        <div className='post'>
-          {post}
-        </div>
+        return (
+          <div className='post'>
+            {post}
+          </div>
+        )
       })}
       </div>
     </div>
+    </Layout>
   )
 }
