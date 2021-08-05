@@ -1,8 +1,8 @@
 import React from 'react'
 import './Home.css'
 import { useState, useEffect } from 'react'
-import { getPosts } from '../services/posts'
-import Layout from '../components/Layout'
+import { getPosts } from '../../services/posts'
+import Layout from '../../components/Layout/Layout'
 
 export default function Home(props) {
 

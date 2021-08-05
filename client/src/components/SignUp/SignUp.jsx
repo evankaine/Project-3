@@ -1,8 +1,8 @@
 import {useState} from 'react'
-import {signUp} from "../services/users"
+import {signUp} from "../../services/users"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
-import "./signup.css"
+import "./SignUp.css"
 
 export default function SignUp(props) {
     let history = useHistory()
@@ -62,7 +62,7 @@ export default function SignUp(props) {
               <button className="raise" type="submit">Sign Up</button>
             </form>
             <p className="linkWrap">
-              <Link to="/" className="signInLink">Back to Sign In</Link>
+              <Link to="/sign-in" className="signInLink">Back to Sign In</Link>
             </p>
           </div>
         </div>
