@@ -1,52 +1,69 @@
 import {useState} from 'react'
-import {createUser} from "../services/apiConfig"
+import {signUp} from "../services/users"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 import "./signup.css"
 
-
-export default function SignUp() {
+export default function SignUp(props) {
     let history = useHistory()
-    let defaultInput = {
-        username: "",
-      email: "",
-        password: "",
-    }
-    const [input, setInput] = useState(defaultInput)
+    const [input, setInput] = useState({username: "", email: "", password: ""})
 
-    function handleChange(event) {
-        let {name, value} = event.target
-        setInput(prevState => ({
-            ...prevState,
-            [name]: value,
+    const handleChange = (e) => {
+        let {id, value} = e.target
+        setInput((prevInput) => ({
+            ...prevInput,
+            [id]: value,
         }))
     }
 
-    async function handleSubmit(event) {
-        event.preventDefault()
-        await createUser(input)
-        history.push("/home")
+    const handleSubmit = async (e) => {
+      e.preventDefault()
+      const user = await signUp(input)
+      props.setuser(user)
+      history.push("/")
     }
 
-    return (
-      <div className="wrapper">
-        <div className="form">
-        <div className="title">
-            <h1>imgNation</h1>
-            <br />
-            <h3>Sign Up:</h3>
-        </div>
-            <form onChange={handleChange} onSubmit={handleSubmit}>
-          <div className="input_wrap">
-              <input type="text" name="username" placeholder="Username" value={input.username} />
+  return (
+        <div className="wrapper">
+          <div className="form">
+            <div className="title">
+              <h1>imgNation</h1>
+              <br />
+              <h3>Sign Up:</h3>
+            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="input_wrap">
+              
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="Username"
+                  value={input.username}
+                  onChange={handleChange}
+                />
           
-                <input type="email" name="email" placeholder="Email" value={input.email} />
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                  value={input.email}
+                  onChange={handleChange}
+                />
           
-                <input type="password" name="password" placeholder="Password" value={input.password} />
-          </div>
-                <button className="raise" type="submit">Sign Up</button>
-          </form>
-          <p className="linkWrap"><Link to="/" className="signInLink">Back to Sign In</Link></p>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  value={input.password}
+                  onChange={handleChange}
+                />
+              
+              </div>
+              <button className="raise" type="submit">Sign Up</button>
+            </form>
+            <p className="linkWrap">
+              <Link to="/" className="signInLink">Back to Sign In</Link>
+            </p>
           </div>
         </div>
     )

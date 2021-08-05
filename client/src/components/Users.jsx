@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {getUsers} from "../services/apiConfig"
+import {verify} from "../services/users"
 
 export default function Users() {
     const [data, setData] = useState([])
@@ -9,7 +9,7 @@ export default function Users() {
     }, [])
     //get all users to show
     async function handleData() {
-        let res = await getUsers()
+        let res = await verify()
         setData(res)
         console.log(res)
     }

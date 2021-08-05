@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import './Home.css'
 import { useState, useEffect } from 'react'
-import {getPosts} from '../services/apiConfig'
+import { getPosts } from '../services/posts'
+import Layout from '../components/Layout'
 
-export default function Home() {
+export default function Home(props) {
 
   const [posts, setPosts] = useState([])
 
@@ -14,17 +14,21 @@ export default function Home() {
       setPosts(data)
     }
     fetchPosts()
-  })
+  }, [])
+
   return (
+    <Layout user={props.user} setUser={props.setUser}>
     <div className='home-page'>
-      <Navbar />
       <div className='all-posts'>
       {posts.map((post) => {
-        <div className='post'>
-          {post}
-        </div>
+        return (
+          <div className='post'>
+            {post}
+          </div>
+        )
       })}
       </div>
     </div>
+    </Layout>
   )
 }

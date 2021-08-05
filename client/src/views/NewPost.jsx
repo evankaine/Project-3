@@ -1,15 +1,14 @@
 import { useState } from "react";
-import {createPost} from "../services/apiConfig"
-// import { createTodo } from "../../services/todos";
+import {createPost} from "../services/posts"
 import { useHistory } from "react-router";
+import Layout from '../components/Layout'
 
-export default function NewPost() {
-  const [input, setInput] = useState({ username: "", imgURL: "", caption: "" , user_id: ""});
+export default function NewPost(props) {
+  const [input, setInput] = useState({ username: "", imgURL: "", caption: ""});
   const history = useHistory();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
@@ -23,6 +22,7 @@ export default function NewPost() {
   };
   
   return (
+    <Layout user={props.user} setUser={props.setUser}>
       <div>
         New Post
         <form onSubmit={handleSubmit}>
@@ -41,5 +41,6 @@ export default function NewPost() {
           <button>Create new Post</button>
         </form>
       </div>
+    </Layout>
   );
 }
