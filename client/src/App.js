@@ -9,7 +9,6 @@ import { Route } from "react-router-dom"
 import UserPage from './views/UserPage'
 import { useState, useEffect } from 'react'
 import { verify } from './services/users'
-import Layout from '../src/components/Layout/Layout'
 
 //all the routes and paths
 function App() {

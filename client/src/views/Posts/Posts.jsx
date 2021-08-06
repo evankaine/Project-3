@@ -10,7 +10,7 @@ export default function Posts(props) {
   useEffect(() => {
     const fetchPosts = async () => {
       let res = await getPosts()
-      console.log(res)
+      
       setPosts(res)
     }
     fetchPosts()

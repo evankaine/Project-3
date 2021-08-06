@@ -4,9 +4,9 @@ import { useHistory } from "react-router";
 import Layout from "../../components/Layout/Layout"
 
 export default function NewPost(props) {
-  const [input, setInput] = useState({ username: `${props.user}`, imgURL: "", caption: ""});
+  const [input, setInput] = useState({ username: `${props.user.username}`, imgURL: "", caption: ""});
   const history = useHistory();
-
+  
   const handleChange = (e) => {
     const { id, value } = e.target;
     setInput((prevInput) => ({
