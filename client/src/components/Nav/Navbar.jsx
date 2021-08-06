@@ -28,9 +28,9 @@ let history = useHistory()
             <Link to="/new-post">
               <AddAPhotoIcon className='navbar-link icon' />
             </Link>
-            {/* <Link to="/user"> */}
+            <Link to="/profile"> 
               <AccountCircleIcon className='navbar-link icon' />
-            {/* </Link> */}
+            </Link> 
           </div>
           </div>
           <div className='nav-account'>
