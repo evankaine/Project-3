@@ -3,6 +3,7 @@ import './Home.css'
 import { useState, useEffect } from 'react'
 import { getPosts } from '../../services/posts'
 import Layout from '../../components/Layout/Layout'
+import Like from '../../components/Like'
 
 export default function Home(props) {
 
@@ -18,7 +19,8 @@ export default function Home(props) {
 
   return (
     <Layout user={props.user} setUser={props.setUser}>
-    <div className='home-page'>
+      <div className='home-page'>
+        <Like/>
       <div className='all-posts'>
       {posts.map((post) => {
         return (
@@ -30,5 +32,6 @@ export default function Home(props) {
       </div>
     </div>
     </Layout>
+   
   )
 }
