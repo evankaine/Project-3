@@ -4,7 +4,9 @@ const TOKEN_KEY = process.env.TOKEN_KEY || '294638'
 const restrict = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(" ")[1];
-    if (jwt.verify(token, TOKEN_KEY)) {
+    const user = jwt.verify(token, TOKEN_KEY)
+    if (user) {
+      req.user = user
       next();
     }
   } catch (e) {

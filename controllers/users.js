@@ -111,9 +111,11 @@ export const signUp = async (req, res) => {
 export const signIn = async (req, res) => {
   try {
     const { email, password } = req.body
+    console.log(req.body)
     const user = await User.findOne({ email }).select(
       "email username password_digest"
     )
+    console.log(password, user.password_digest)
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         id: user._id,
@@ -127,6 +129,7 @@ export const signIn = async (req, res) => {
       res.status(401).json({ error: "Invalid Credentials" })
     }
   } catch (e) {
+    console.log(e)
     res.status(500).json({ error: e.message })
   }
 }
