@@ -29,7 +29,9 @@ export default function Navbar(props) {
           </form>
           <div>
             <AddAPhotoIcon className='add-photo-icon' />
-            <AccountCircleIcon className='account-icon' />
+            <Link to="/user/profile">
+              <AccountCircleIcon className='account-icon' />
+            </Link>
           </div>
           <button onClick={handleSignOut}>Sign Out</button>
         </>

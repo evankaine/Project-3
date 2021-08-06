@@ -37,7 +37,7 @@ function App() {
             <NewPost user={user} setUser={setUser} />
           </Route>
 
-          <Route exact path="/user/:id">
+          <Route exact path="/user/profile">
             <UserPage user={user} setUser={setUser} />
           </Route>
         </>
