@@ -17,24 +17,24 @@ export default function Navbar(props) {
   return (
     <div className='accountNav'>
       {props.user ? (
-        <>
-          <div className='accountNav-links'>
-            <Link to="/">Home</Link>
-          </div>
-          <header>imgNation</header>
-          <div>{props.user?.username}</div>
-          <form>
-            <input className='search-bar' placeholder='Search...'></input>
-          </form>
+      <>
+        <div className='navbar'>
+          <Link to='/' className='header'>
+            <header className='header'>imgNation</header>
+          </Link>
           <div>
             <Link to="/posts">
-              <AddAPhotoIcon className='add-photo-icon' />
+              <AddAPhotoIcon className='navbar-link icon' />
             </Link>
             {/* <Link to="/user"> */}
-              <AccountCircleIcon className='account-icon' />
+              <AccountCircleIcon className='navbar-link icon' />
             {/* </Link> */}
           </div>
-          <button onClick={handleSignOut}>Sign Out</button>
+          </div>
+          <div className='nav-account'>
+            <div className='nav-logged-in'>Logged in as: <span className='nav-username'>{props.user?.username}</span></div>
+            <button onClick={handleSignOut} className='sign-out'>Sign Out</button>
+          </div>
         </>
       ) : (
         <div className='siteNav'>
