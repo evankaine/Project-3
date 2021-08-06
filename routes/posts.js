@@ -1,12 +1,17 @@
-// const {Router} = require('express')
-// const {getAllPosts, getPost, createPost, updatePost, deletePost} = require("../controllers/posts.js")
+import { Router } from "express";
+import restrict from "../helpers/restrict.js";
+import { getPosts, createPost, getPost } from "../controllers/posts.js";
 
-// const router = Router()
+const router = Router();
+// get all posts
+router.get("/posts", getPosts);
+// get id post
+router.get("/posts/:id", getPost);
+// // post createpost
+router.post("/posts", restrict, createPost);
+// // put updatePost
+// router.put("/posts/:id", restrict, updatePost);
+// // delete post
+// router.delete("/posts/:id", restrict, deletePost);
 
-// router.get("/", getAllPosts)
-// router.get("/:id", getPost)
-// router.post("/", createPost)
-// router.put("/:id", updatePost)
-// router.delete("/:id", deletePost)
-
-// module.exports = router 
+export default router;
