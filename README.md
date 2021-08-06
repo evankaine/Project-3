@@ -70,7 +70,7 @@ module.exports = mongoose.model("User", userSchema)
 
 - Create Account
 - Make posts
-- Sign In
+- Sign In / Sign Up / Sign Out
 - Profile Page
 
 #### PostMVP
