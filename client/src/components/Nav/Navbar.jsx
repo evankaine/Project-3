@@ -23,7 +23,8 @@ export default function Navbar(props) {
             <header className='header'>imgNation</header>
           </Link>
           <div>
-            <Link to="/posts">
+
+            <Link to="/new-post">
               <AddAPhotoIcon className='navbar-link icon' />
             </Link>
             {/* <Link to="/user"> */}
@@ -34,6 +35,7 @@ export default function Navbar(props) {
           <div className='nav-account'>
             <div className='nav-logged-in'>Logged in as: <span className='nav-username'>{props.user?.username}</span></div>
             <button onClick={handleSignOut} className='sign-out'>Sign Out</button>
+
           </div>
         </>
       ) : (
