@@ -4,13 +4,15 @@ import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import './Navbar.css'
 import { signOut } from "../../services/users";
+import { useHistory } from "react-router-dom"
 
 export default function Navbar(props) {
-
+let history = useHistory()
 
   const handleSignOut = () => {
     signOut();
     props.setUser(null);
+    history.push("/")
   };
 
 
@@ -23,7 +25,7 @@ export default function Navbar(props) {
             <header className='header'>imgNation</header>
           </Link>
           <div>
-            <Link to="/posts">
+            <Link to="/new-post">
               <AddAPhotoIcon className='navbar-link icon' />
             </Link>
             {/* <Link to="/user"> */}

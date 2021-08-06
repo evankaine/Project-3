@@ -1,6 +1,6 @@
 import { Router } from "express";
 import restrict from "../helpers/restrict.js";
-import { getPosts, createPost, getPost } from "../controllers/posts.js";
+import { getPosts, createPost, getPost, deletePost } from "../controllers/posts.js";
 
 const router = Router();
 // get all posts
@@ -12,6 +12,6 @@ router.post("/posts", restrict, createPost);
 // // put updatePost
 // router.put("/posts/:id", restrict, updatePost);
 // // delete post
-// router.delete("/posts/:id", restrict, deletePost);
+router.delete("/posts/:id", restrict, deletePost);
 
 export default router;

@@ -18,3 +18,7 @@ export const createPost = async (input) => {
     throw e;
   }
 };
+
+export const deletePost = async (id) => {
+  await api.delete(`/posts/${id}`)
+} 
