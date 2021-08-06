@@ -36,18 +36,18 @@ export const getPost = async (req, res) => {
 };
 
 
-// const deletePost = async (req,res) => {
-//   try {
-//       //find and delete the post
-//       const post = await Post.findByIdAndDelete(req.params.id)
-//       //get the user by the user ID in the post and remove it from the array
-//       await User.findByIdAndUpdate({_id: post.user_id}, {$pull: {posts: post._id}})
-//       if (post) {
-//           return res.status(200).send("Post Deleted")
-//       } else {
-//           return res.status(404).send("Post Not Found")
-//       }
-//   } catch(err) {
-//       return res.status(500).json({error: err.message})
-//   }
-// }
+export const deletePost = async (req,res) => {
+  try {
+      //find and delete the post
+      const post = await Post.findByIdAndDelete(req.params.id)
+      //get the user by the user ID in the post and remove it from the array
+      await User.findByIdAndUpdate({_id: post.user_id}, {$pull: {posts: post._id}})
+      if (post) {
+          return res.status(200).send("Post Deleted")
+      } else {
+          return res.status(404).send("Post Not Found")
+      }
+  } catch(err) {
+      return res.status(500).json({error: err.message})
+  }
+}
