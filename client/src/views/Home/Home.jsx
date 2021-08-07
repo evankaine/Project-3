@@ -7,10 +7,10 @@ export default function Home(props) {
 
 
   return (
-    <>
+    <div>
     <Layout user={props.user} setUser={props.setUser}> 
     </Layout>
     <Posts />
-    </>
+    </div>
   )
 }

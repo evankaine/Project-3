@@ -5,8 +5,9 @@
   align-items: center;
   /* margin: 5% 20% 0 20%; */
   margin: 0 auto;
-  width: 800px;
+  width: 650px;
   height: 100vh;
+  box-shadow: 0 2px 10px rgb(57, 55, 55);
 }
 
 .empty-post {
@@ -55,5 +56,5 @@
 } */
 .username-text {
   text-align: left;
-  margin: 5% 10% 2% 10%;
+  margin: 5% 25% 2% 25%;
 }
