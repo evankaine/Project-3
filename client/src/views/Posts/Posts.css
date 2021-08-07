@@ -56,11 +56,13 @@ img {
   letter-spacing: 1px;
   float: left;
   padding: 0px 20px 0px 0px;
+  
 }
 
 hr {
   width: 75%;
-  margin: auto;
+  margin: 0 auto;
+  height: 1px;
 }
 
 .delete {
