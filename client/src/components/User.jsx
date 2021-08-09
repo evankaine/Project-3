@@ -13,16 +13,6 @@ export default function User() {
   const [user, setUser] = useState([id])
 
   const [post, setPost] = useState([])
-
-  useEffect(() => {
-    const fetchPost = async (id) => {
-      let response = await getPosts(id)
-      
-      setPost(response)
-      console.log(response)
-    }
-    fetchPost()
-}, [])
   
   useEffect(() => {
     handleData()
@@ -50,6 +40,17 @@ export default function User() {
     console.log(res)
   }
 
+useEffect(() => {
+    const fetchPost = async (id) => {
+      let response = await getPosts(id)
+      
+      setPost(response)
+      console.log(response)
+    }
+    fetchPost()
+}, [])
+  
+  
   function handlePosts() {
     if (post) {
       return (

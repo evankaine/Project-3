@@ -10,6 +10,15 @@ export const getPosts = async () => {
   }
 };
 
+export const getPost = async (id) => {
+  try {
+    const res = await api.get(`/posts/${id}`);
+    return res.data;
+  } catch (e) {
+    throw e;
+  }
+};
+
 export const createPost = async (input) => {
   try {
     const res = await api.post("/posts", input);
