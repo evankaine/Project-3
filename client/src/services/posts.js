@@ -20,5 +20,17 @@ export const createPost = async (input) => {
 };
 
 export const deletePost = async (id) => {
-  await api.delete(`/posts/${id}`)
-} 
+  
+  await api.delete(`/posts/${id}`);
+    
+};
+
+
+export const updatePost = async (id, post) => {
+  try {
+    const res = await api.put(`/posts/${id}`, post);
+    return res.data;
+  } catch (e) {
+    throw e;
+  }
+};

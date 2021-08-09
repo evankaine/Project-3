@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+
 import './Navbar.css'
 import { signOut } from "../../services/users";
 import { useHistory } from "react-router-dom"
@@ -24,12 +25,14 @@ let history = useHistory()
           <Link to='/' className='header'>
             <header className='header'>imgNation</header>
           </Link>
-          <div>
+          <div className="icons">
             <Link to="/new-post">
-              <AddAPhotoIcon className='navbar-link icon' />
-            </Link>
+              <AddAPhotoIcon fontSize="large" className='navbar-link icon'>
+                <p>New Post</p>
+              </AddAPhotoIcon>
+              </Link>
             <Link to="/profile"> 
-              <AccountCircleIcon className='navbar-link icon' />
+              <AccountBoxIcon fontSize="large" className='navbar-link icon' />
             </Link> 
           </div>
           </div>

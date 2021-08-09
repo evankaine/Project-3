@@ -3,7 +3,7 @@
 }
 
 .signInLink:link {
-  color:#f16160;
+  color:#dc6161;
 }
 
 .signInLink:visited {
@@ -11,5 +11,5 @@
 }
 
 .signInLink:hover {
-  color: #f16160;
+  color: #dc6161;
 }
