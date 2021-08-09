@@ -58,7 +58,7 @@ export default function Posts(props) {
             <hr />
             <div className="post-actions">
               <IconButton>
-                <Link to="/edit-post" className="edit">
+                <Link to={`/edit-post/${post._id}`} className="edit">
                   <EditIcon />
                 </Link>
               </IconButton>
