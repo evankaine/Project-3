@@ -54,7 +54,7 @@ export const deletePost = async (req,res) => {
 
 export const updatePost = async (req,res) => {
   try {
-      const post = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+      const post = await Post.findByIdAndUpdate(req.params.id, {caption: req.body.caption}, {new: true})
       if (post) {
           return res.status(201).send("Post Updated")
       } else {

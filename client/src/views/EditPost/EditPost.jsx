@@ -7,54 +7,54 @@ import Layout from "../../components/Layout/Layout"
 
 
 export default function EditPost(props) {
-  // const [post, setPost] = useState({ caption: "" })
-  // const [isUpdated, setUpdated] = useState(false)
-  // let { id } = useParams()
+  const [post, setPost] = useState({ caption: "" })
+  const [isUpdated, setUpdated] = useState(false)
+  let { id } = useParams()
 
-  // useEffect(() => {
-  //   const getInput = async () => {
-  //     const post = await getPosts(id)
-  //     setPost(post)
-  //   }
-  //   getInput()
-  // }, [id])
+  useEffect(() => {
+    const getInput = async () => {
+      const post = await getPosts(id)
+      setPost(post)
+    }
+    getInput()
+  }, [id])
 
-  // const handleChange = (e) => {
-  //   const { id, value } = e.target
-  //   setPost(prevInput => ({
-  //     ...prevInput,
-  //     [id]: value
-  //   }))
-  // }
+  const handleChange = (e) => {
+    const { id, value } = e.target
+    setPost(prevInput => ({
+      ...prevInput,
+      [id]: value
+    }))
+  }
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const updated = await updatePost(id, post);
-  //   setUpdated(updated)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const updated = await updatePost(id, post);
+    setUpdated(updated)
 
-  // }
+  }
 
-  // if (isUpdated) {
-  //   return <Redirect to={`/`} />
-  // }
+  if (isUpdated) {
+    return <Redirect to={`/`} />
+  }
 
 
 
   return (
     <Layout user={props.user} setUser={props.setUser}>
-      {/* <div>
+      <div>
         <form onSubmit={handleSubmit}>
           <br />
           <br />
-          <label>Message:</label>
+          <label>Edit Caption:</label>
           <br />
           <br />
           <input id="message" value={post.caption} onChange={handleChange} />
           <br />
           <br />
-          <button>CHANGE</button>
+          <button>submit</button>
         </form>
-      </div> */}
+      </div>
     </Layout>
   )
 }

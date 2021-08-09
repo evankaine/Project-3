@@ -38,7 +38,7 @@ function App() {
             <NewPost user={user} setUser={setUser} />
           </Route>
 
-          <Route exact path="edit-post">
+          <Route exact path="/edit-post/:id">
             <EditPost user={user} setUser={setUser} />
           </Route>
 
