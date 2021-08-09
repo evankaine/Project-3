@@ -2,6 +2,7 @@ import React from 'react'
 import { getPosts, deletePost } from '../../services/posts'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
+import Like from '../../components/Likes'
 import EditIcon from '@material-ui/icons/Edit';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import DeleteIcon from '@material-ui/icons/Delete';
