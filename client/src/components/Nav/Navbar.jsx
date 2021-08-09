@@ -21,7 +21,7 @@ let history = useHistory()
     <div className='accountNav'>
       {props.user ? (
       <>
-        <div className='navbar'>
+        <div  className='navbar'>
           <Link to='/' className='header'>
             <header className='header'>imgNation</header>
           </Link>

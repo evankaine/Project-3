@@ -35,7 +35,8 @@ export default function SignIn(props) {
             <form onSubmit={handleSubmit}>
               <div className="input_wrap">
                 <input
-                  id="email"
+              id="email"
+              name="email"
                   type="email"
                   placeholder="Email"
                   value={input.email}
@@ -44,6 +45,8 @@ export default function SignIn(props) {
 
                 <input
                   id="password"
+                  name="password"
+                  autoComplete="on"
                   type="password"
                   placeholder="Password"
                   value={input.password}
