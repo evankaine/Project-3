@@ -3,12 +3,30 @@ import { useParams, Link } from 'react-router-dom'
 import { verify } from "../services/users"
 import "./user.css"
 import React from 'react'
+import { getPosts, deletePost } from '../services/posts'
+import EditIcon from '@material-ui/icons/Edit';
+import IconButton from '@material-ui/core/IconButton';
+
 
 export default function User() {
 
   let { id } = useParams
-  
+
   const [user, setUser] = useState([id])
+
+  const [post, setPost] = useState([])
+
+  const [toggle, setToggle] = useState(false)
+
+  useEffect(() => {
+    const fetchPost = async (id) => {
+      let response = await getPosts(id)
+      
+      setPost(response)
+      console.log(response)
+    }
+    fetchPost()
+}, [])
   
   useEffect(() => {
     handleData()
@@ -36,20 +54,43 @@ export default function User() {
     console.log(res)
   }
 
-  function handlePosts() {
-    if (user.posts) {
-      return (
+  async function handleDelete(event) {
+    await deletePost(event.target.value)
+    setToggle(prevState => !prevState)
+  }
 
-        user.posts.map(post => {
-          return (
-            < h5 className='single-post' >
-              <img src={user.posts}/>
-              <Link to={`/post/${post._id}`}>
-              {post.caption}
-            </Link>
-            </h5 >
-          )
-        })
+  function handlePosts() {
+    if (post) {
+      return (
+          post.map((posts) => {
+            return (
+              <div className='post-container' >
+
+                <div className="post-header">
+                  <h2 className="username">{posts.username}</h2>
+                </div>
+
+                <div className="post-image">
+                  <img src={posts.imgURL} />
+                </div>
+
+                <div className="card-content">
+                  <p className="caption"><span className="caption-name">{posts.username}</span>{posts.caption}</p>
+                </div>
+                <br />
+                <hr />
+                <div className="post-actions">
+                  <IconButton>
+                    <Link to={`/edit-post/${posts._id}`} className="edit">
+                      <EditIcon />
+                    </Link>
+                  </IconButton>
+                  <button className="delete" value={post._id}
+                onClick={handleDelete}>Delete</button>
+                </div>
+              </div>
+            )
+          })
       )
     } else {
       return <div className="empty-container">
@@ -73,7 +114,7 @@ export default function User() {
         </div>         */}
         <h1 className="username-text">{user.username}</h1>
     </div>
-      <h5>{`All post:`}</h5>
+      <h5>{`My Posts:`}</h5>
       {handlePosts()}
       </div>
 )
