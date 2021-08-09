@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,9 +7,10 @@
 
 .App {
   text-align: center;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-body{
+body {
   background: linear-gradient(to bottom right, #f4b661, #dc6161);
+  background-repeat: no-repeat;
 }
