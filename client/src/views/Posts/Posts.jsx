@@ -32,25 +32,24 @@ export default function Posts(props) {
   
   
   return (
-    
-      <div className='all-posts'>
-        {posts.map((post) => (
-          <div className='post-container'>
+  <div>
+          <div className='all-posts'>
+            {posts.map((post) => (
+              <div className='post-container'>
 
-            <div className="post-header">
-              <h2 className="username">{post.username}</h2>
-            </div>
+                <div className="post-header">
+                  <h2 className="username">{post.username}</h2>
+                </div>
             
-            <div className="post-image">
-              <img src={post.imgURL} />
-            </div>
+                <div className="post-image">
+                  <img src={post.imgURL} />
+                </div>
             
-            <div className="heart">
-              <IconButton>
-                <FavoriteIcon fontSize="large" />
-              </IconButton>
-            </div>
-
+                <div className="heart">
+                  <IconButton>
+                    <FavoriteIcon fontSize="large" />
+                  </IconButton>
+                </div>
             <div className="card-content">
               <p className="caption"><span className="caption-name">{post.username}</span>{post.caption}</p>
             </div>
@@ -63,16 +62,16 @@ export default function Posts(props) {
                 </Link>
               </IconButton>
 
-              <button className="delete" value={post._id}
-                onClick={handleDelete}>Delete</button>
+                  <button className="delete" value={post._id}
+                    onClick={handleDelete}>Delete</button>
               
+
             </div> */}
 
               
             
-            
+           
           </div>
-        ))}
     </div>
-    )
+  )
 }
