@@ -12,6 +12,7 @@ export const getPosts = async () => {
 
 export const getPost = async (id) => {
   try {
+    console.log(id)
     const res = await api.get(`/posts/${id}`);
     return res.data;
   } catch (e) {
