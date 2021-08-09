@@ -55,8 +55,8 @@ export default function Posts(props) {
               <p className="caption"><span className="caption-name">{post.username}</span>{post.caption}</p>
             </div>
             <br />
-            <hr />
-            <div className="post-actions">
+          
+            {/* <div className="post-actions">
               <IconButton>
                 <Link to={`/edit-post/${post._id}`} className="edit">
                   <EditIcon />
@@ -66,7 +66,7 @@ export default function Posts(props) {
               <button className="delete" value={post._id}
                 onClick={handleDelete}>Delete</button>
               
-            </div>
+            </div> */}
 
               
             

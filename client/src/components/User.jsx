@@ -114,7 +114,7 @@ export default function User() {
         </div>         */}
         <h1 className="username-text">{user.username}</h1>
     </div>
-      <h5>{`All post:`}</h5>
+      <h5>{`My Posts:`}</h5>
       {handlePosts()}
       </div>
 )

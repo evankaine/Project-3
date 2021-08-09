@@ -49,7 +49,7 @@ export default function EditPost(props) {
           <label>Edit Caption:</label>
           <br />
           <br />
-          <input id="message" value={post.caption} onChange={handleChange} />
+          <input id="caption" value={post.caption} name="caption" onChange={handleChange} />
           <br />
           <br />
           <button>submit</button>
