@@ -23,8 +23,9 @@ export const createPost = async (req, res) => {
 
 export const getPost = async (req, res) => {
   try {
-    const { post_id } = req.params;
-    const post = await Post.findById(post_id).populate(post_id);
+    const { id } = req.params;
+    console.log(req.params)
+    const post = await Post.find({user_id: id});
     if (post) {
       res.json(post);
     } else {
