@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { verify } from "../services/users"
 import "./user.css"
 import React from 'react'
-import { getPosts, deletePost } from '../services/posts'
+import { getPost, deletePost } from '../services/posts'
 import EditIcon from '@material-ui/icons/Edit';
 import IconButton from '@material-ui/core/IconButton';
 
@@ -19,8 +19,8 @@ export default function User() {
   const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
-    const fetchPost = async (id) => {
-      let response = await getPosts(id)
+    const fetchPost = async () => {
+      let response = await getPost()
       
       setPost(response)
       console.log(response)
