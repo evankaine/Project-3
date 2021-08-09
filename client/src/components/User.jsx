@@ -15,47 +15,51 @@ export default function User() {
   const [user, setUser] = useState([id])
 
   const [post, setPost] = useState([])
-
-  const [toggle, setToggle] = useState(false)
+ // eslint-disable-next-line no-unused-vars
+  const [toggle, setToggle] = useState(false) 
 
   useEffect(() => {
     const fetchPost = async () => {
       let response = await getPost()
       
       setPost(response)
-      console.log(response)
+      // console.log(response)
     }
     fetchPost()
 }, [id])
   
   useEffect(() => {
     handleData()
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
   
   async function handleData() {
     let res = await verify(id)
     setUser(res)
-    console.log(res)
-  }
+    // console.log(res)
+  } 
+  
+ 
+
 
   async function handleDelete(event) {
     await deletePost(event.target.value)
     setToggle(prevState => !prevState)
   }
 
+
   function handlePosts() {
     if (post) {
       return (
-          post.map((posts) => {
+          post.map((posts, index) => {
             return (
-              <div className='post-container' >
+              <div className='post-container' key={index} >
 
                 <div className="post-header">
                   <h2 className="username">{posts.username}</h2>
                 </div>
 
                 <div className="post-image">
-                  <img src={posts.imgURL} />
+                  <img src={posts.imgURL} alt="user post" />
                 </div>
 
                 <div className="card-content">
