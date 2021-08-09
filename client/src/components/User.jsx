@@ -3,12 +3,26 @@ import { useParams, Link } from 'react-router-dom'
 import { verify } from "../services/users"
 import "./user.css"
 import React from 'react'
+import { getPosts } from '../services/posts'
+
 
 export default function User() {
 
   let { id } = useParams
-  
+
   const [user, setUser] = useState([id])
+
+  const [post, setPost] = useState([])
+
+  useEffect(() => {
+    const fetchPost = async (id) => {
+      let response = await getPosts(id)
+      
+      setPost(response)
+      console.log(response)
+    }
+    fetchPost()
+}, [])
   
   useEffect(() => {
     handleData()
@@ -37,19 +51,19 @@ export default function User() {
   }
 
   function handlePosts() {
-    if (user.posts) {
+    if (post) {
       return (
-
-        user.posts.map(post => {
-          return (
-            < h5 className='single-post' >
-              <img src={user.posts}/>
-              <Link to={`/post/${post._id}`}>
+          post.map((posts) => {
+            return (
+              < h5 className='single-post' >
+                <img src={posts.imgURL} width="300" height="300"  />
+                <h1>{posts.caption}</h1>
+                {/* <Link to={`/post/${post}`}>
               {post.caption}
-            </Link>
-            </h5 >
-          )
-        })
+            </Link> */}
+              </h5 >
+            )
+          })
       )
     } else {
       return <div className="empty-container">
