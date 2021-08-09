@@ -136,7 +136,6 @@ a {
 }
 
 .sign-out {
-  
   font-family: 'Nunito Sans', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -169,8 +168,13 @@ a {
 
 @media screen and (max-width: 825px) {
   .header {
-    
     margin: 10px;
+  }
+  .sign-out {
+    display: none;
+  }
+  .nav-logged-in {
+    display: none;
   }
 }
 

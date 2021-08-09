@@ -81,3 +81,9 @@
   transition: box-shadow 0.3s ease-in-out;
   transform: translateY(-0.5em);
 }
+
+@media screen and (max-width: 650px) {
+  .wrapper-post{
+    width: 350px;
+  }
+}
