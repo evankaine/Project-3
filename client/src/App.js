@@ -4,6 +4,7 @@ import SignIn from "./components/SignIn/SignIn"
 import UsersPage from './views/UsersPage'
 import Home from './views/Home/Home'
 import NewPost from '../src/views/NewPost/NewPost'
+import EditPost from "../src/views/EditPost/EditPost"
 import { Route } from "react-router-dom"
 import UserPage from './views/UserPage'
 import { useState, useEffect } from 'react'
@@ -28,7 +29,6 @@ function App() {
         <Home user={user} setUser={setUser} />
       </Route>
       {user && (
-        
         <>
           <Route exact path="/users">
             <UsersPage user={user} setUser={setUser} />
@@ -38,8 +38,11 @@ function App() {
             <NewPost user={user} setUser={setUser} />
           </Route>
 
-          <Route exact path="/profile">
+          <Route exact path="edit-post">
+            <EditPost user={user} setUser={setUser} />
+          </Route>
 
+          <Route exact path="/profile">
             <UserPage user={user} setUser={setUser} />
           </Route>
         </>

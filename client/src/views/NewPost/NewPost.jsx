@@ -2,6 +2,7 @@ import { useState } from "react";
 import {createPost} from "../../services/posts"
 import { useHistory } from "react-router";
 import Layout from "../../components/Layout/Layout"
+import "./NewPost.css"
 
 export default function NewPost(props) {
   const [input, setInput] = useState({ username: `${props.user.username}`, imgURL: "", caption: ""});
@@ -24,16 +25,23 @@ export default function NewPost(props) {
   
   return (
     <Layout user={props.user} setUser={props.setUser}>
-      <div>
-        <form onSubmit={handleSubmit}>
-        {/* <input placeholder="username" id="username" value={input.username} onChange={handleChange} /> */}
-          <br />
-          <input placeholder="Image URL" id="imgURL" value={input.imgURL} onChange={handleChange} />
-          <br />
-          <input placeholder="Write a Caption..." id="caption" value={input.caption} onChange={handleChange} />
-          <br />
-          <button>Create new Post</button>
-        </form>
+      <div className="wrapper-post">
+        <div className="form-post">
+          <form onSubmit={handleSubmit}>
+            <div className="input-post">
+              <input placeholder="Image URL"
+                id="imgURL"
+                value={input.imgURL}
+                onChange={handleChange} />
+              <input className="post-caption" type="textarea"
+                placeholder="Write a Caption..."
+                id="caption"
+                value={input.caption}
+                onChange={handleChange} />
+            </div>
+            <button className="raise">Create new Post</button>
+          </form>
+        </div>
       </div>
     </Layout>
   );

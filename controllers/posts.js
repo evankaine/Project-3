@@ -2,7 +2,7 @@ import Post from "../models/post.js";
 
 export const getPosts = async (req, res) => {
   try {
-    const post = await Post.find({});
+    const post = await Post.find({}).sort({'_id':-1});
     res.json(post);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -44,6 +44,19 @@ export const deletePost = async (req,res) => {
       await User.findByIdAndUpdate({_id: post.user_id}, {$pull: {posts: post._id}})
       if (post) {
           return res.status(200).send("Post Deleted")
+      } else {
+          return res.status(404).send("Post Not Found")
+      }
+  } catch(err) {
+      return res.status(500).json({error: err.message})
+  }
+}
+
+export const updatePost = async (req,res) => {
+  try {
+      const post = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+      if (post) {
+          return res.status(201).send("Post Updated")
       } else {
           return res.status(404).send("Post Not Found")
       }
