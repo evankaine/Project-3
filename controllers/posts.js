@@ -23,8 +23,8 @@ export const createPost = async (req, res) => {
 
 export const getPost = async (req, res) => {
   try {
-    const { id } = req.params;
-    const post = await Post.findById(id).populate(user_id);
+    const { post_id } = req.params;
+    const post = await Post.findById(post_id).populate(post_id);
     if (post) {
       res.json(post);
     } else {
@@ -54,7 +54,8 @@ export const deletePost = async (req,res) => {
 
 export const updatePost = async (req,res) => {
   try {
-      const post = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    
+      const post = await Post.findByIdAndUpdate(req.params.id, {caption: req.body.caption}, {new: true})
       if (post) {
           return res.status(201).send("Post Updated")
       } else {

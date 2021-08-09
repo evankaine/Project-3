@@ -36,6 +36,7 @@ export default function SignUp(props) {
               
                 <input
                   id="username"
+                  name="username"
                   type="text"
                   placeholder="Username"
                   value={input.username}
@@ -44,6 +45,7 @@ export default function SignUp(props) {
           
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="Email"
                   value={input.email}
@@ -52,6 +54,8 @@ export default function SignUp(props) {
           
                 <input
                   id="password"
+                  name="password"
+                  autoComplete="on"
                   type="password"
                   placeholder="Password"
                   value={input.password}
