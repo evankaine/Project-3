@@ -3,7 +3,9 @@ import { useParams, Link } from 'react-router-dom'
 import { verify } from "../services/users"
 import "./user.css"
 import React from 'react'
-import { getPosts } from '../services/posts'
+import { getPosts, deletePost } from '../services/posts'
+import EditIcon from '@material-ui/icons/Edit';
+import IconButton from '@material-ui/core/IconButton';
 
 
 export default function User() {
@@ -13,6 +15,8 @@ export default function User() {
   const [user, setUser] = useState([id])
 
   const [post, setPost] = useState([])
+
+  const [toggle, setToggle] = useState(false)
 
   useEffect(() => {
     const fetchPost = async (id) => {
@@ -50,18 +54,41 @@ export default function User() {
     console.log(res)
   }
 
+  async function handleDelete(event) {
+    await deletePost(event.target.value)
+    setToggle(prevState => !prevState)
+  }
+
   function handlePosts() {
     if (post) {
       return (
           post.map((posts) => {
             return (
-              < h5 className='single-post' >
-                <img src={posts.imgURL} width="300" height="300"  />
-                <h1>{posts.caption}</h1>
-                {/* <Link to={`/post/${post}`}>
-              {post.caption}
-            </Link> */}
-              </h5 >
+              <div className='post-container' >
+
+                <div className="post-header">
+                  <h2 className="username">{posts.username}</h2>
+                </div>
+
+                <div className="post-image">
+                  <img src={posts.imgURL} />
+                </div>
+
+                <div className="card-content">
+                  <p className="caption"><span className="caption-name">{posts.username}</span>{posts.caption}</p>
+                </div>
+                <br />
+                <hr />
+                <div className="post-actions">
+                  <IconButton>
+                    <Link to={`/edit-post/${posts._id}`} className="edit">
+                      <EditIcon />
+                    </Link>
+                  </IconButton>
+                  <button className="delete" value={post._id}
+                onClick={handleDelete}>Delete</button>
+                </div>
+              </div>
             )
           })
       )
