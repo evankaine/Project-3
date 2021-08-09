@@ -13,12 +13,16 @@ const [count, setCount] = useState(0)
     })
   }
 
-  function likeClick() {
-    
+  // function likeClick() {
+  //   incrementMe
+  // }
+  const handleClick = async (e) => {
+    e.preventDefault()
   }
+
     return (
       <div>
-        <button onClick={this.likeClick} > Like: {count} </button>
+        <button onClick={incrementMe} > Like: {count} </button>
       </div>
     )
   

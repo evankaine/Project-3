@@ -46,6 +46,10 @@ export default function Posts(props) {
               <img src={post.imgURL} />
             </div>
             
+            <div className="like">
+              <Like/>
+            </div>
+            
             <div className="heart">
               <IconButton>
                 <FavoriteIcon fontSize="large" />
