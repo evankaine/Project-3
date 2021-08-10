@@ -9,7 +9,8 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? null : "http://localhost:2222/api",
+      ? "https://lost-remote.herokuapp.com/api"
+      : "http://localhost:2222/api",
 });
 
 api.interceptors.request.use(
