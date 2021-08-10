@@ -1,16 +1,16 @@
 .post-container {
   background: white;
   letter-spacing: 3px;
-	width: 100%;
-	max-width: 650px;
-	margin: auto;
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
   margin-bottom: 20px;
   margin-top: 20px;
   box-shadow: 0 2px 10px rgb(57, 55, 55);
 }
 
 .post-header {
-	height: 50px;
+  height: 50px;
 }
 
 .username {
@@ -20,24 +20,21 @@
   text-transform: uppercase;
 }
 
-
 img {
-	width: 650px;
-	height: 600px;
-	display: flex;
+  width: 650px;
+  height: 600px;
+  display: flex;
   justify-content: center;
-
 }
 
 .heart {
   float: left;
   margin: 10px 0px 10px 10px;
-  
 }
 
 .card-content {
   padding: 40px 10px 5px 10px;
-  
+
   margin: auto;
   display: flex;
   justify-content: flex-start;
@@ -56,7 +53,6 @@ img {
   letter-spacing: 1px;
   float: left;
   padding: 0px 20px 0px 0px;
-  
 }
 
 hr {
@@ -66,31 +62,38 @@ hr {
 }
 
 .delete {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    margin-right: 5px;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-right: 5px;
 }
 
-.post-actions{
+.post-actions {
   display: flex;
   justify-content: flex-end;
 }
 
-
-@media screen and (max-width: 650px) {
-  img {
-    width: 300px;
-	  height: 300px;
-	  display: flex;
-    justify-content: center;
-  }
+@media screen and (max-width: 1075px) {
   .post-container {
-    
-    max-width: 300px;
-    
+    max-width: 500px;
+  }
+
+  img {
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .post-container {
+    max-width: 350px;
+  }
+
+  img {
+    max-width: 350px;
+    max-height: 350px;
   }
 }

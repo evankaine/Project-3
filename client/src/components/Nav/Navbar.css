@@ -4,12 +4,19 @@ a {
 }
 
 .siteNav {
-  margin: 250px 0px 200px 0px;
+  top: 0px;
+  padding: 200px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: fixed;
+  background: linear-gradient(to bottom right, #f4b661, #dc6161);
+  z-index: 100;
 }
 
 .accountNav .navbar {
   display: fixed;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .siteLink {
@@ -65,7 +72,6 @@ a {
   float: left;
   margin-left: 40px;
   position: fixed;
-  
 }
 
 .header:hover {
@@ -91,7 +97,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   font-weight: 700;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   color: black;
   font-size: 20px;
   opacity: 1;
@@ -121,7 +127,7 @@ a {
   font-size: 14px;
   margin: 3px 10px 0px 20px;
   letter-spacing: 0px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .nav-username {
@@ -129,21 +135,21 @@ a {
   font-family: monospace;
   font-weight: 800;
   font-size: 15px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   letter-spacing: 1px;
   padding-left: 1px;
   text-transform: uppercase;
 }
 
 .sign-out {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: black;
   background-color: white;
   padding: 6px;
   border: 1px solid transparent;
-  position: relative;	
+  position: relative;
   cursor: pointer;
   user-select: none;
   height: 30px;
@@ -151,18 +157,31 @@ a {
 
 .sign-out:hover,
 .sign-out:focus {
-  
   transition: box-shadow 0.3s ease-in-out;
-  
+
   transform: translateY(0.1em);
 }
 
 @media screen and (max-width: 1300px) {
   .header {
-    position: relative;
+    font-size: 50px;
+    left: 5px;
+  }
+  .nav-logged-in {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .header {
+    font-size: 35px;
+  }
+  .sign-out {
+    top: 40px;
+    right: 100px;
   }
   .nav-account {
-    position: relative;
+    right: -70px;
   }
 }
 
@@ -170,18 +189,12 @@ a {
   .header {
     margin: 10px;
   }
-  .sign-out {
-    display: none;
-  }
-  .nav-logged-in {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 700px) {
   .navbar {
     padding: 50px 0px 0px 0px;
-    margin: 0px;
+    margin: -50px 0px 0px 0px;
   }
 
   .icon {
@@ -193,5 +206,14 @@ a {
 @media screen and (max-width: 625px) {
   .icon {
     margin: 20px;
+  }
+  .header {
+    position: relative;
+  }
+  .nav-logged-in {
+    display: none;
+  }
+  .sign-out {
+    display: none;
   }
 }
