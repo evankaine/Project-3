@@ -26,11 +26,10 @@ export default function User() {
       // console.log(response)
     }
     if (user.id) {
-      console.log(id)
+      
       fetchPost()
     }
 }, [user])
-  console.log(user, id)
   useEffect(() => {
     handleData()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -38,7 +37,7 @@ export default function User() {
   async function handleData() {
     let res = await verify(id)
     setUser(res)
-    // console.log(res)
+    
   } 
   
 
