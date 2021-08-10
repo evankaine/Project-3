@@ -29,7 +29,7 @@ export default function User() {
       console.log(id)
       fetchPost()
     }
-}, [user])
+}, [user, id])
   console.log(user, id)
   useEffect(() => {
     handleData()
