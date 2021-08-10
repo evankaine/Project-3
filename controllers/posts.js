@@ -25,7 +25,7 @@ export const getPost = async (req, res) => {
   try {
     const { id } = req.params;
     console.log(req.params)
-    const post = await Post.find({user_id: id});
+    const post = await Post.find({user_id: id}).sort({'_id':-1});
     if (post) {
       res.json(post);
     } else {
