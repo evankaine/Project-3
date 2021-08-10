@@ -84,35 +84,35 @@ module.exports = mongoose.model("User", userSchema)
 
 | Day      | Deliverable                                | Status     |
 | -------- | ------------------------------------------ | ---------- |
-| Aug 2    | Proposal Approval / Backend Setup          | Incomplete |
-| Aug 3    | Backend / Create, Read, Update, and Delete | Incomplete |
-| Aug 4    | React Logic                                | Incomplete |
-| Aug 5    | CSS Styling / MVP                          | Incomplete |
-| Aug 6    | Advanced CSS / Post-MVP                    | Incomplete |
-| Aug 9    | Presentations                              | Incomplete |
+| Aug 2    | Proposal Approval / Backend Setup          | Complete |
+| Aug 3    | Backend / Create, Read, Update, and Delete | Complete |
+| Aug 4    | React Logic                                | Complete |
+| Aug 5    | CSS Styling / MVP                          | Complete |
+| Aug 6    | Advanced CSS / Post-MVP                    | Complete |
+| Aug 9    | Presentations                              | Complete |
 
 ## Timeframes
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Proposal                  |    H     |      2hrs      |     -----     |    -----    |
-| Backend setup             |    H     |      3hrs      |     -----     |    -----    |
-| Authentication            |    H     |      2hrs      |     -----     |    -----    |
-| React Logic               |    H     |      3hrs      |     -----     |    -----    |
-| Landing Screen            |    H     |      2hrs      |     -----     |    -----    |
-| Lisitng Screen            |    H     |      2hrs      |     -----     |    -----    | 
-| Detail Screen             |    H     |      2hrs      |     -----     |    -----    |
-| Form/post creation        |    H     |      2hrs      |     -----     |    -----    |
-| Data/update(edit post)    |    H     |      2hrs      |     -----     |    -----    |
-| Componenet Home Page      |    H     |      2hrs      |     -----     |    -----    |
-| Componenet Profile Page   |    H     |      3hrs      |     -----     |    -----    |
-| Component CSS Home        |    H     |      3hrs      |     -----     |    -----    |
-| Component CSS Profile     |    H     |      3hrs      |     -----     |    -----    |
+| Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Backend setup             |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Authentication            |    H     |      2hrs      |     3hrs      |    3hrs     |
+| React Logic               |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Landing Screen            |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Lisitng Screen            |    H     |      2hrs      |     3hrs      |    3hrs     | 
+| Detail Screen             |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Form/post creation        |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Data/update(edit post)    |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Componenet Home Page      |    H     |      2hrs      |     3hrs      |    3hrs     |
+| Componenet Profile Page   |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Component CSS Home        |    H     |      3hrs      |     2hrs      |    2hrs     |
+| Component CSS Profile     |    H     |      3hrs      |     2hrs      |    2hrs     |
 | Like Button Function      |    H     |      2hrs      |     -----     |    -----    |
 | Friends Page              |    H     |      3hrs      |     -----     |    -----    |
 | Messages                  |    H     |      3hrs      |     -----     |    -----    |
-| UI / UX                   |    H     |      3hrs      |     -----     |    -----    |
-| Total                     |    H     |      42hrs     |     -----     |    -----    |
+| UI / UX                   |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Total                     |    H     |      42hrs     |     -----     |    41hrs    |
 
 ## SWOT Analysis
 
