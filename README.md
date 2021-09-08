@@ -1,5 +1,5 @@
 # imgNation
-https://zealous-lamport-de2b52.netlify.app/
+https://eaimgnation.netlify.app/
 
 ## Project Overview
 
