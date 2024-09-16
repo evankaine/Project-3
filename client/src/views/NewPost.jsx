@@ -1,16 +1,18 @@
 import { useState } from "react";
+<<<<<<< HEAD
+import {createPost} from "../services/posts"
+=======
 import "./newpost.css"
-import { createPost } from "../services/apiConfig"
-import NavBar from "../components/navbar/Navbar"
+>>>>>>> dev
 import { useHistory } from "react-router";
+import Layout from '../components/Layout/Layout'
 
 export default function NewPost(props) {
-  const [input, setInput] = useState({ username: "", imgURL: "", caption: "" , user_id: ""});
+  const [input, setInput] = useState({ username: "", imgURL: "", caption: ""});
   const history = useHistory();
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
@@ -24,8 +26,14 @@ export default function NewPost(props) {
   };
   
   return (
+<<<<<<< HEAD
+    <Layout user={props.user} setUser={props.setUser}>
+      <div>
+        New Post
+=======
       <div className="form">
         <h1 className="title">Make a Post</h1>
+>>>>>>> dev
         <form onSubmit={handleSubmit}>
       <div className="input_wrap">
           
@@ -43,5 +51,10 @@ export default function NewPost(props) {
           
         </form>
       </div>
+<<<<<<< HEAD
+    </Layout>
+=======
+      </div>
+>>>>>>> dev
   );
 }
